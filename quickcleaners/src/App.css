@@ -1,0 +1,113 @@
+.header {
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 27vh;
+    margin-bottom: 5%;
+}
+
+.header-text-container {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    font-family: italic;
+}
+
+.qc-header {
+    height: 200px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.header-navagation {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #610015;
+    
+}
+
+    
+
+
+.home-button, .services-button, .customers-button {
+    text-align: center;
+    margin-top: 13px;
+    margin-right: 100px;
+    margin-left: 100px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+.distinctiveCare {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    height: 50px;
+    width: 37%;
+}
+
+
+
+
+.middle-section {
+    height: 800px;
+   
+    text-align: center;
+}
+
+.middle-section h2{
+    font-family: italic;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.middle-section h3{
+    font-family: italic;
+    text-align: center;
+    margin-left: 8%;
+    margin-right: 8%;
+    line-height: 34px;;
+    font-size: 1.3rem;
+    
+}
+
+.family-owned {
+    margin-top: 300px; 
+    margin-bottom: 300px;
+   background-color: #610015;
+   color: white;
+   padding: 70px;
+    
+}
+
+.our-services-button {
+    border-radius: 25px;
+    margin-top: 40px;
+    height: 60px;
+    width: 190px;
+    color: #610015;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-color: black ;
+    border-width: 3px;
+}
+
+
+.bottom-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 650px;
+    margin-bottom: 10%;
+    
+}
+
+.home-bottom-map-image {
+    height: 500px;
+    width: 550px;
+    border-radius: 10px;
+}
+
+
