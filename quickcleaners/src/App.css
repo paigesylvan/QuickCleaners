@@ -1,3 +1,4 @@
+/* Header */
 .page-container {
     display: flex;
     height: 100vh;
@@ -22,14 +23,16 @@
 .qc-header-logo {
     height: 100%;
     width: 500px;
+    
 }
 
 .header-navagation {
     width: 100%;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: center;
     background-color: #610015;
+    margin-top: 18px;
     
 }
 
@@ -45,98 +48,7 @@
     text-decoration: none;
 }
 
-.distinctiveCare {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    height: 50px;
-    width: 37%;
-}
-
-.video {
-    height: 70vh;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.video-overlay-text {
-    text-align: center;
-    padding-top: 100px;
-    width: 1100px;
-    height: 400px;
-    position: absolute; 
-    top: 5%; 
-    left: 17%; 
-    z-index:1000;
-    font-size: 60px;
-    font-family: italic;
-    color: white;
-}
-
-.home-image { 
-    margin-top: 50px;
-    width: 100%;
-    height: 800px;
-}
-
-.middle-section {
-    display:flex;
-    align-items: center;
-    height: 600px;
-    text-align: center;
-    margin-right:40px;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    padding: 0 90px;
-}
-
-.middle-section h2{
-    font-family: italic;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    margin-top: 20px;
-}
-
-.middle-section h3{
-    font-family: italic;
-    text-align: center;
-    margin-left: 8%;
-    margin-right: 8%;
-    line-height: 34px;;
-    font-size: 1.3rem;
-}
-
-.family-owned {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    color: #610015;
-    padding-right: 60px;
-}
-
-.our-services-button {
-    border-radius: 25px;
-    margin-top: 40px;
-    height: 60px;
-    width: 190px;
-    background-color: #610015;
-    color:white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-color: black ;
-    border-width: 2px;
-}
-
-.our-services-button:hover {
-    background-color: white;
-    color:#610015;
-}
-
-.home-bottom-map-image {
-    height: 480px;
-    width: 530px;
-    border-radius: 10px;
-    margin-left: 300px;
-}
+/* Footer */
 
 .footer {
     background-color: #610015;
@@ -165,23 +77,193 @@
 }
 
 
+
+/* HomePage */
+.home-section {
+    margin: 0;
+    padding: 0;
+  
+    background: linear-gradient(to top, #610015, #ffffff); /* Adjust yourSolidColorHere to the desired color */
+  }
+
+
+.distinctiveCare {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    height: 50px;
+    width: 37%;
+}
+
+.video {
+    height: 78.5vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay-text {
+    text-align: center;
+    padding-top: 100px;
+    width: 100vw;
+    height: 400px;
+    position: absolute; 
+    top: 5%; 
+    left: 25%; 
+    z-index:1000;
+    font-size: 60px;
+    font-family: italic;
+    color: white;
+}
+
+.our-services-button {
+    border-radius: 25px;
+    margin-top: 40px;
+    height: 60px;
+    width: 190px;
+    background-color: #610015;
+    color:white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-color: black ;
+    border-width: 2px;
+}
+
+.our-services-button:hover {
+    background-color: white;
+    color:#610015;
+}
+
+.home-image { 
+    margin-top: 50px;
+    width: 100%;
+    height: 800px;
+}
+
+.floating-text-boxes-container {
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    margin-bottom: 700px;
+  }
+  
+  .floating-text-box {
+    height: 200px;
+    left: -100px; /* Initial position off-screen */
+    opacity: 0;
+    transition: all 3s ease;
+    margin: 20px;
+    width: 100vw;
+    border-radius: 25px;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .floating-text-box h1 {
+    font-size: 4rem;
+    line-height: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .floating-text-box.visible {
+    left: 50px; /* Position on-screen */
+    opacity: 1;
+  }
+  /*image floaty start*/
+
+  .images-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add some space between images and text boxes */
+  }
+  
+  .side-image {
+    width: 10rem; /* Adjust the width of the images */
+    height: 10rem; /* Maintain aspect ratio */
+  }
+  
+  .floating-text-boxes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .floating-text-box {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    margin-bottom: 20px; /* Add some space between text boxes */
+  }
+  
+  .floating-text-box.visible {
+    opacity: 1;
+  }
+
+  /* floaty end*/
+
+.bottom-section {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 500px;
+    margin: 10px;
+    height: 1000px;
+}
+
+.family-owned {
+    margin-left: 250px;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    border: solid 2px white ;
+    padding: 20px;
+}
+
+.family-owned h2 {
+    font-family: italic;
+    margin-bottom: 40px;
+    font-size: 4rem;
+    margin-top: 20px;
+    
+}
+
+.family-owned h3 {
+    font-family: italic;
+    letter-spacing: 3px;
+    line-height: 49px;;
+    font-size: 2rem;
+}
+
+.google-map {
+    height: 1000px;
+    width: 530px;
+    margin: 200px;
+    margin-left: 910px;
+    margin-bottom: 600px;
+}
+
+
 /* Services Page */
 
 .title-text-container {
     display: flex;
     width: 100vw;
     height: 40vh;
-    background-color: #610015;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-bottom: 40vh;
+
 }
-.services-image {
-    height: 450px;
-    width: 750px;
-    margin: 50px;
-    margin-left: 150px;
-    margin-top: 100px;
-    border-radius: 25px;
+
+.video2 {
+    height: 66vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .services-header-text {
@@ -202,8 +284,13 @@
 .row-1, .row-2, .row-3 {
     display:flex;
     justify-content: space-evenly;
-    padding: 50px;
+    padding: 60px;
     text-align: center;
+    margin:20px;
+}
+
+.row-3{
+    margin-bottom: 15vh;;
 }
 
 .box {
@@ -212,7 +299,7 @@
     height: 400px;
     width: 550px;
     border-radius: 25px;
-    padding-top: 25px;
+    
 }
 
 .image {
@@ -226,20 +313,70 @@
 /* Our Customers */
 
 .top-text-container {
+    position: absolute;
+    left: 10%;
+    background-color:#610015;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+    margin-bottom: 250px;
+    margin: 50px;
+    height: 30vh;
+    width: 70%;
+    border-radius: .8rem;
+    margin-top: 90px;
+}
+
+.cus {
+    border-radius: -10px;
+    object-fit: contain;
+    height: 25vh;
+    margin: 50px;
+}
+
+.cus-text  h1 {
+
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+     margin-top: 10px;
+    margin-left: 50px;
+}
+
+.cus-text h2{
+    margin-left: 50px;
+    line-height: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 1.9px;
     text-align: center;
-    margin: 250px;
+}
+ 
+
+.middle-text-container {
+    text-align: center;
+    margin-top: 650px;
+}
+
+.middle-text-container h1 {
+    font-size: 2.7rem;
+}
+
+.middle-text-container h2 {
+    font-size: 1.6rem;
+    padding: 20px;
+    line-height: 34px;
 }
 
 .profession-customers {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    
 }
 
 .customers-hospitals, .customers-churches, .customers-schools {
     margin: 50px;
-    height: 300px;
+    height: 500px;
     width: 500px;
     background-color:#610015;
     border: solid 8px #610015;
@@ -254,58 +391,9 @@
     color: #610015;
 }
 
-.middle-text-container {
-    background-color:#610015;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-    height: 30vh;
-    width: 100vw;
-}
 
-.cus {
-    border-radius: 500px;
-    object-fit: contain;
-    height: 25vh;
-    margin: 50px;
-}
-
-.cus-text1  {
-    line-height: 22px;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-left: 100px;
-}
-
-.cus-text2 {
-    margin-left: 100px;
-    line-height: 20px;
-    font-size: 1.2rem;
-    letter-spacing: 1.6px;
-}
- 
 /* customer FAQ Drop Down */
 
-.accordionn,
-.accordionn::before,
-.accordionn::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-.question {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: .4rem;
-    margin-top: 1rem;
-    padding: 1rem;
-    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1)
-}
 
 section {
     width: 100%;
@@ -322,51 +410,79 @@ section {
     padding: 0 1.5rem;
 }
 
-.accordion-link {
-    font-size: 1.6rem;
-    color: black;
-    text-decoration: none;
-    background-color: white;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.container h1 {
+    margin-left: 10px;
+    font-size: 2.2rem;
+    margin-bottom: 35px;
 }
 
-.accordion-link i{
-    color: red;
-    padding: .5rem;
-}
 
-.accordion-link .ion-md-remove{
+
+.closedAnswer {
     display: none;
 }
 
-.answer{
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-    background-color: lightgray;
-}
-
-.answer::before {
-    content: "";
-    position: absolute;
-    width: .6rem;
-    height: 90%;
-    background-color: lightgrey;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.answer p{
-    color: rgba(255,255,255,.8);
+.openAnswer {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    width: 100%;
+    padding: 1px;
+    
+    background-color: 	#F8F4F4;
+    margin-top: -0.1rem;
+    margin-bottom: 30px;
     font-size: 1.4rem;
-    padding: 2rem;
+    line-height: 35px;
+    border-radius: .8rem;
 }
 
-.accordion-item:target .answer{
-    max-height: 20rem;
+.qContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    background-color: white;
+    color: black;
+    border: 2px solid lightgrey;
+    width: 100%;
+    height: 35px;
+    margin: 12px;
+    margin-top: 0rem;
+    padding: 1rem;
+    border-radius: .35rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1)
 }
 
+.arrow {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000;
+    transition: all 0.2s ;
+    height: 25px;
+    background-color: transparent;
+}
+
+.toggle-up {
+    transform: rotate(180deg);
+}
+
+.toggle-down {
+    transform: rotate(0);
+}
+
+
+
+
+ul {
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+  
+  ul.folded {
+    max-height: 0;
+  }
+  
+  ul.unfolded {
+    max-height: 300px; 
+  }

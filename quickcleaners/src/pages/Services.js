@@ -17,12 +17,9 @@ const Services = () => {
   return (
     <div>
       <div className="title-text-container">
-        <img src={services} alt='image1' className='services-image'/>
-        <div className='services-header-text'>
-        <h1> Welcome to Quick Cleaners,</h1>
-        <h1>where quality meets convenience.</h1> 
-        <h2>Our expert team is dedicated to providing you with pristine garments and an exceptional customer experience.  Explore our range of services:</h2>
-        </div>
+            <video className='video2' loop autoPlay='true' muted>
+                <source src={MOV} type="video/mp4"/>
+            </video>
       </div>
 
       <div className="row-1">
