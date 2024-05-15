@@ -53,17 +53,18 @@ const Services = () => {
       </div>
 
       <div className="row-3">
-        
-        <button class="button" className='box' type="button"  data-hover='We handle your treasured items with the utmost care, ensuring theyre preserved and revitilized. Wedding Gowns and Dresses, Suit Jackets and Tuxedos, Silk, Lace and Cashmere' data-active='i am active' ><span>
-           <img src={seven} alt='img7' className='image'/>Speciality Garments </span></button>
-
-        <button class="button" className='box' type="button"  data-hover='blah blah blah blah' data-active='i am active' ><span>
-           <img src={eight} alt='img8' className='image'/>Suede and Leather </span></button>
-
-        <button class="button" className='box' type="button"  data-hover='blah blah blah blah' data-active='i am active' ><span>
-           <img src={nine} alt='img9' className='image'/>Express Bag </span></button>
-        
-     
+        <div className="box">
+          <h1>Specialty Garments</h1>
+          <img src={seven} alt='image1' className='image'/>
+        </div>
+        <div className="box">
+          <h1>Suede and Leather</h1>
+          <img src={eight} alt='image1' className='image'/>
+        </div>
+        <div className="box">
+          <h1>Express Bag</h1>
+          <img src={nine} alt='image1' className='image'/>
+        </div>
       </div>
 
     </div>
