@@ -1,253 +1,628 @@
-/* Header */
 .page-container {
     display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    height: auto; /* Allow the container to grow dynamically */
+    overflow: hidden;
     
 }
 
-
+/* Header */
 .header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 27vh;
-    min-height: 270px;
-    font-family: italic;
-    z-index: 1000;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  position: relative; /* Enable positioning for children */
+  height: 10vh; /* Adjust as needed */
+  width: 100%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5); 
+  z-index: 1;
 }
 
-.qc-header-logo {
+.icons {
+   display: inline-block;  
+}
+.dropdown {
+  position: absolute;
+  top: 30px; /* Slight offset from the top */
+  left: 30px; /* Slight offset from the left */
+  
+  
+  }
+  
+.call-button {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the icon and phone number */
+    gap: 15px;
+  }
+  
+  .phone-icon {
+    font-size: 4rem;
+    color: green;
+    cursor: pointer;
+  }
+  
+  .phone-number {
+    font-size: 2rem;
+    font-weight: bold; /* Add emphasis */
+    color: black;
+    margin-left: 10px; /* Space between icon and number */
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Make sure it's not interactable */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth appearance */
+
+  }
+
+  .phone-link:hover .phone-number {
+    opacity: 1; /* Make visible */
+    visibility: visible; /* Ensure it appears */
+    text-decoration: none;
+    
+  }
+
+.header-logo {
+    align-self: center;
     height: 100%;
-    width: 500px;
-    
+    width: 600px;
+    padding-top: 17px;
 }
 
-.header-navagation {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    background-color: #610015;
-    margin-top: 18px;
-    
-}
+.dropdown-button {
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+  }
 
-.home-button, .services-button, .customers-button {
+  .home-button, .services-button, .customers-button {
     text-align: center;
-    margin-top: 13px;
-    margin-right: 100px;
-    margin-left: 100px;
-    color: white;
-    font-size: 1.3rem;
+    margin-right: 0px;
+    margin-left: 4px;
+    color: black;
+    font-size: 1.5rem;
     font: bold;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
 }
 
-/* Footer */
+.dropdown-menu {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.1s ease, opacity 0.1s ease;
+  list-style: none; 
+  padding: 0; /* Removes extra padding around the list */
+  margin: 0; /* Removes any extra margin around the list */
 
-.footer {
-    background-color: #610015;
-    width: 100%;
-    object-fit: cover;
-}
-
-.bottom-section-text-container {
-    display: flex;
-    justify-content: center;
-    max-height: 30vh;
-}
-
-.footer-picture {
-    object-fit: contain;
-    
-}
-
-.address, .hours {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    line-height:  5px;
-}
-
-
-
-/* HomePage */
-.home-section {
-    margin: 0;
-    padding: 0;
-    background: #610015;
-    /*background: linear-gradient(to top, #610015, #ffffff); /* Adjust yourSolidColorHere to the desired color */
-    width: 100%;
   }
 
-.video {
-    height: 78.5vh;
-    width:101%;
-    object-fit: cover;
-    z-index: -1;
+  .dropdown-menu.show {
+    height: auto; /* Or a fixed height, like 150px */
+    opacity: 1;
+  }
+
+  .dropdown-menu li {
+    opacity: 0;
+    transform: translateY(-10px); /* Start slightly above their final position */
+    transition: opacity 0.5s ease, transform 0.8s ease; /* Smooth transition effect */
+    margin: 9px 0; /* Adds spacing between list items */
+  padding: 0;
+  display: block;
+  }
+ 
+  .dropdown-menu.show li {
+    opacity: 1;
+    transform: translateY(0);
+   
+  }
+  
+  .dropdown-menu.show li:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+  .dropdown-menu.show li:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  .dropdown-menu.show li:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+
+.home-button:hover, .services-button:hover, .customers-button:hover {
+    color:  #610015; /* Oxblood color for the text */
+    transition: color 0.2s ease;
 }
 
-.video-overlay-text {
+.dropdown-menu li:hover {
+    color:  #610015; /* Oxblood color for the text */
+    /*transition: color 0.2s ease;*/
+}
+
+.dropdown-button:hover {
+    color:   #610015; /* Optional: changes text color for better contrast */
+    border: 1px solid white; /* Optional: adds a border for visual clarity */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+  }
+
+/* Homepage Container */
+.homepage {
+    height:90vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+
+  }
+  
+  /* Snapping Sections */
+  .section {
+    scroll-snap-align: start; 
+    width: 100vw; /* Full width of the viewport */
+    height: 90vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 100px;
-    height: 400px;
-    position: absolute; 
-    top: 2%; 
-    left: 20%; 
-    z-index:1000;
-    font-size: 60px;
-    font-family: italic;
-    color: white;
+    position: relative;
+   
+    
+  }
+  
+  /* section oooonnnnneeee */
+  .section-1 {
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .video-container {
+    width: 105%; /* Full width */
+    overflow: hidden;
+    height: 80vh;
+    position: relative; /* Allows positioning relative to the parent */
+    top: 0; /* Moves the child to the top of the parent */
+    left: 0; 
+    background-color: black;
+}
+  
+.video {
+    width: 105%;
+    object-fit: cover; /* Ensures the video fills the container */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+    opacity: 70%;
+}
+
+.video-container::after {
+    content: ''; /* Creates an empty pseudo-element */
+    position: absolute; /* Position it relative to the .video-container */
+    bottom: 0; /* Attach to the bottom of the container */
+    left: 0; /* Aligns with the container's left edge */
+    width: 100%; /* Covers the full width of the container */
+    height: 10%; /* Adjust the height of the gradient */
+    background: linear-gradient(to bottom, transparent, white); /* Gradient effect */
+    pointer-events: none; /* Ensures overlay doesn’t block video interactions */
+    z-index: 1; /* Places the gradient above the video */
+}
+
+.gradient-overlay {
+    position: absolute; /* Positioned over the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgb(255, 255, 255)); 
+  } 
+
+
+/* Video Container */
+.video-container {
+  position: relative; /* Ensures text overlay is positioned relative to the video */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height to cover the viewport */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Background Video */
+.background-video {
+  width: 100%; /* Stretches video to full width */
+  height: 100%; /* Stretches video to full height */
+  object-fit: cover; /* Ensures the video covers the entire container */
+}
+
+/* Text Overlay */
+.video-overlay-text {
+  position: absolute; /* Positioned over the video */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+  text-align: center; /* Center-align text */
+  color: white; /* White text for visibility */
+  z-index: 1; /* Ensures text appears above the video */
+  padding: 20px; /* Adds space around the text */
+  border-radius: 10px; /* Smooth, rounded corners */
+ 
+}
+
+/* Styling for Individual Headings */
+.video-overlay-text h1 {
+  font-size: 56px; /* Prominent heading */
+  font-weight: 700; /* Bold text */
 }
 
 .video-overlay-text h2 {
-    font-size: 1.4rem;
-    letter-spacing: 4px;
-    color: white;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 240px;
 }
 
-.our-services-button {
-    border-radius: 25px;
-    margin-top: 20px;
-    height: 90px;
-    width: 260px;
-    background-color: #610015;
-    color:white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-color: black ;
-    border-width: 2px;
+.video-overlay-text h4 {
+  font-size: 35px;
+  font-weight: 400;
+  margin: 50px 0;
+  font-style: italic;
 }
 
+  
+  /* Individual Sections */
+  .section1-bottomcontainer{
+    margin-top: 660px;
+    display: flex; /* Enables Flexbox layout */
+    justify-content: space-evenly; /* Even horizontal spacing between sections */
+    align-items: center; /* Aligns items vertically within the container */
+  }
 
-.our-services-button:hover {
-    background-color: white;
-    color:#610015;
-}
-
-
-
-.family-owned {
-    margin: 5%;
-    color: black;
-    width: 80vw;
-    text-align: center;
-    color: white;
-    padding: 40px;
-}
-
-.family-owned h2 {
-    font-family: italic;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    margin-top: 20px;
-    
-}
-
-.family-owned h3 {
-    font-family: italic;
-    letter-spacing: 1.5px;
-    line-height: 33px;;
-    font-size: 1.5rem;
-    padding: 20px 20px;
-    
-}
-
-.floating-text-boxes-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
-    margin-bottom: 100px;
+  .bottom-section{
+    display: flex; /* Flexbox for horizontal alignment of items */
+    flex-direction: column; /* Ensures content (image and h1) is side-by-side horizontally */
+    align-items: center; /* Centers content vertically within the section */
+    padding: 15px;
+    border: 2px solid transparent; /* Default transparent border */
+    border-radius: 10px; /* Rounded corners for the box */
+    transition: all 0.3s ease; /* Smooth transition on hover */
     margin-top: 100px;
-  }
-  
-  .floating-text-box {
-    display: flex;
-    height: 80px;
-    opacity: 0;
-    transition: all 3s ease;
-    border-radius: 25px;
-    text-align: center;
-    padding: 50px;
-   
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 75px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
   }
 
-  .floating-text-box h1 {
-    font-size: 4rem;
-    line-height: 70px;
-    letter-spacing: 2px;
+  .bottom-section img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1px; /* Space between image and heading */
   }
   
-  .floating-text-box.visible {
-    left: 50px; /* Position on-screen */
-    opacity: 1;
-  }
-  /*image floaty start*/
-
-  .images-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px; /* Add some space between images and text boxes */
-  }
-  
-  .side-image {
-    width: 10rem; /* Adjust the width of the images */
-    height: 10rem; /* Maintain aspect ratio */
-  }
-  
-  .floating-text-boxes-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .floating-text-box {
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: all 0.5s ease;
-    margin-bottom: 20px; /* Add some space between text boxes */
-  }
-  
-  .floating-text-box.visible {
-    opacity: 1;
+  .bottom-section h1 {
+    font-size: 1.5rem; /* Adjust font size */
+    color: #333; /* Heading color */
+    z-index: 2;
   }
 
-  /* floaty end*/
+  .bottom-section::before {
+    content: ""; /* Create the burst effect */
+    position: absolute; /* Position the overlay within the section */
+    width: 0; /* Start with no size */
+    height: 0; /* Start with no size */
+    background: radial-gradient(circle,rgba(168, 54, 63, 0.8) -50%, rgba(255, 255, 255, 0) 60%);
+    transform: translate(0%, -18%); /* Center the burst */
+    border-radius: 50%; /* Ensure it's circular */
+    opacity: 0; /* Hidden initially */
+    transition: all 0.4s ease; /* Smooth transition for size and opacity */
+    z-index: 1; /* Ensure the burst is behind the text */
+  }
 
-.bottom-section {
-    display:flex;
-    justify-content: space-between;
+  .bottom-section:hover::before {
+    width: 400px; /* Make the burst large enough to cover the entire section */
+    height: 400px; /* Ensure full coverage */
+    opacity: 1; /* Make it visible */
+  }
+
+  .section section-2 {
+    background-color: pink;
     color: white;
-    margin-top: 20%;
-    margin: 40px 40px;
-    height: 800px;
+  }
+
+.section2 {
+    display: flex; /* Enable Flexbox for column layout */
+    flex-direction: row; /* Align columns side by side */
+    justify-content: space-evenly; /* Space columns evenly */
+    height: 100%;   
 }
 
-.bottom-text {
+.section2-column1 {
+    text-align: center; /* Align content within the column */
+    margin-top: 140px;
+    background-color: white;
+    width: 45vw;
+}
+
+.section2-column1 h1 {
+    text-align: center;
+    font-size: 3.2rem;
+
+}
+
+.section2-column1 h2 {
+    font-size: 2rem;
+}
+
+.section2-column1 h3{
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 13px;
+}
+
+.section2-column2 {
+    height: 100%;
+    margin-top: 100px;
+    padding: 15px; /* Add spacing inside each column */
+    text-align: left; /* Align content within the column */
+}
+
+
+.section2-gradient-overlay {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%; 
+    background: linear-gradient(to top, rgb(102, 34, 34), rgba(255, 255, 255, 0)); 
+} 
+  
+  .section section-3 {
+    background-color: #00a86b;
+    color: white;
+  }
+
+/* Dropdown Container */
+.services-dropdown-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  transition: gap 0.3s ease; /* Smoothly transitions spacing */
+}
+
+.services-dropdown-container.dropdown-container-open {
+  gap: 10px; /* Reduce the gap dynamically when any section is open */
+}
+
+/* Individual Service Item */
+.dropdown-service-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden; /* Prevents content overflow */
+}
+
+
+
+
+.dropdown-service-content {
+  height: 0; /* Start with no height */
+  overflow: hidden; /* Prevent overflow when closed */
+  background-color: #fafafa;
+  transition: height 0.3s ease, padding 0.3s ease; /* Smooth opening/closing */
+  color: rgb(92, 91, 91);
+
+}
+
+.dropdown-service-content.open {
+  height: auto; /* Allow full height for content */
+  padding: 15px; /* Add padding for readability */
+  max-height: 900px; /* Allow content to expand */
+}
+
+
+/* Title (Clickable Area) */
+.dropdown-service-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 28px ;
+  font-weight: bold;
+  height: 45px;
+}
+
+.dropdown-service-title:hover {
+  background-color: #f0f0f0;
+}
+
+/* Arrow Icon */
+.service-arrow {
+    padding: 10px;
+  font-size: 25px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.service-arrow.open {
+  transform: rotate(180deg); /* Flip the arrow */
+}
+
+/* Dropdown Content */
+
+/* Fade-in Animation for Content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-service-content h3 {
+  margin: 5px 0; /* Tighten space above and below headings */
+}
+
+.dropdown-service-content p {
+  text-align: left;
+  font-size: 19px;
+  margin: 3px 0; /* Reduce space between paragraphs */
+  color: dark grey;
+
+}
+
+/* Main Container */
+.section3-container {
+  display: flex; /* Creates a row layout */
+  flex-direction: row;
+  justify-content: space-between; /* Space between dropdown and image */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Full width of the row */
+  height: 100vh; /* Full viewport height */
+  padding: 200px; /* Optional: Adds padding inside the row */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/*  Dropdown */
+.service-dropdown {
+  flex: 1; /* Take up equal space with the image */
+  display: flex;
+  justify-content: center; /* Center the dropdown horizontally */
+  align-items: center; /* Center the dropdown vertically */
+}
+
+/*  Image */
+.service-img {
+  flex: 1; /* Allow the left side to take up equal space */
+  display: flex;
+  flex-direction: column; /* Stack the header and image vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center-align the text */
+
+}
+
+.service-img h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.service-img img {
+  max-width: 100%; /* Scale image proportionally to fit */
+  max-height: 80vh; /* Keep image from overflowing the viewport */
+  object-fit: contain; /* Ensure the image doesn’t distort */
+  padding: 0;
+}
+
+
+
+
+
+
+
+  .section section-4 {
+    background-color: #0044cc;
+    color: white;
+  }
+/* Three-Row Section */
+.three-row-section {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack rows vertically */
+  height: 90vh; /* Make the section 90% of the viewport height */
+  width: 100%; /* Full width */
+  padding: 2px; /* Remove padding unless needed */
+  box-sizing: border-box; /* Include padding/border in dimensions */
+ 
+}
+
+/* Individual Rows */
+.row {
+  display: flex; /* Flexbox for rows */
+  flex: 1; /* Make all rows equally fill their parent */
+  flex-direction: row; /* Stack sub-rows horizontally within each row */
+  gap: 0px; /* Space between sections inside each row */
+  width: 100%; /* Full width of rows */
+  background-color: black; /* Background for the row */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.794); /* Optional shadow for depth */
+
+}
+
+/* Sub-Sections (3 Equal Sections Per Row) */
+.sub-row {
+  flex: 1; /* Make all sub-sections equal */
+  display: flex; /* Flexbox for centering content */
+  flex-direction:column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #ffffff; /* Background color for each section */
+
+  padding: 0px; /* Add padding for content */
+  text-align: center; /* Center text */
+}
+
+/* Optional Content Styling */
+
+.sub-row h1 {
+  font-size: 70px; /* Adjust heading size */
+  margin: 0; /* Remove default margin */
+  line-height: 100px;
+
+}
+
+
+.sub-row h3 {
+  font-size: 18px; /* Adjust heading size */
+  margin: 0; /* Remove default margin */
+}
+
+.sub-row p {
+  font-size: 16px; /* Adjust paragraph size */
+  margin: 5px 0; /* Add spacing between text lines */
+  line-height: 1.5; /* Improve readability */
+}
+
+
+
+
+
+
+
+  .section section-5 {
+    background-color: #0044cc;
+    color: white;
+  }
+  
+  .google-map {
     margin: 5%;
 }
 
-.bottom-text h1{
-    padding: 20px;
-}
 
-.google-map {
-    margin: 5%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Services Page */
@@ -315,7 +690,7 @@
 /* Our Customers */
 
 .top-text-container {
-    position: absolute;
+    position: relative;
     left: 10%;
     background-color:#610015;
     color: white;
@@ -418,8 +793,6 @@ section {
     margin-bottom: 35px;
 }
 
-
-
 .closedAnswer {
     display: none;
 }
@@ -488,3 +861,61 @@ ul {
   ul.unfolded {
     max-height: 300px; 
   }
+
+
+  /* Footer */
+
+.footer {
+    background-color: #610015;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+
+
+
+
+
+.bottom-section-text-container {
+    display: flex;
+    justify-content: center;
+    max-height: 30vh;
+}
+
+.footer-picture {
+    object-fit: contain;
+    
+}
+
+.address, .hours {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height:  5px;
+}
+
+/*
+section button
+.our-services-button {
+    border-radius: 25px;
+    margin-top: 20px;
+    height: 90px;
+    width: 260px;
+    background-color: #610015;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-color: black ;
+    border-width: 2px;
+}
+
+
+.our-services-button:hover {
+    background-color: white;
+    color:#610015;
+}
+
+  
+*/
