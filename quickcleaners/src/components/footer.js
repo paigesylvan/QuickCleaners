@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterPic from '../styles/images/footer.png';
+
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
                 <p>Saturday: 8am - 7pm</p>
                 <p>Closed Sundays</p>
             </div>  
-            <img className='footer-picture' src={FooterPic} alt='logoImage'/>
+      
             <div className='address'>
                 <p>2177 D Silvernail Road</p>
                 <p>Pewaukee, Wisconsin</p>

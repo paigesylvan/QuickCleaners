@@ -1,605 +1,374 @@
-.page-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally */
-    height: auto; /* Allow the container to grow dynamically */
-    overflow: hidden;
-    
-}
 
-/* Header */
+
 .header {
-  display: flex;
-  flex-direction: column; /* Stack child elements vertically */
-  position: relative; /* Enable positioning for children */
-  height: 10vh; /* Adjust as needed */
+  position: fixed; /* Keeps the header at the top of the viewport */
+  top: 0;
+  left: 0;
   width: 100%;
-  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5); 
-  z-index: 1;
+  height: 10vh; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out; /* Smooth hide/reveal transition */
+  z-index: 1000; /* Keeps the header on top of other elements */
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.icons {
-   display: inline-block;  
-}
-.dropdown {
-  position: absolute;
-  top: 30px; /* Slight offset from the top */
-  left: 30px; /* Slight offset from the left */
-  
-  
-  }
-  
-.call-button {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center the icon and phone number */
-    gap: 15px;
-  }
-  
-  .phone-icon {
-    font-size: 4rem;
-    color: green;
-    cursor: pointer;
-  }
-  
-  .phone-number {
-    font-size: 2rem;
-    font-weight: bold; /* Add emphasis */
-    color: black;
-    margin-left: 10px; /* Space between icon and number */
-    opacity: 0; /* Start hidden */
-    visibility: hidden; /* Make sure it's not interactable */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth appearance */
-
+  .header-logo {
+  height: auto; 
+  width: 600px; 
+  margin-right: 100px;
   }
 
-  .phone-link:hover .phone-number {
-    opacity: 1; /* Make visible */
-    visibility: visible; /* Ensure it appears */
-    text-decoration: none;
-    
-  }
-
-.header-logo {
-    align-self: center;
-    height: 100%;
-    width: 600px;
-    padding-top: 17px;
-}
-
-.dropdown-button {
-    color: black;
-    border: none;
-    cursor: pointer;
-    width: 100px;
-  }
-
-  .home-button, .services-button, .customers-button {
-    text-align: center;
-    margin-right: 0px;
-    margin-left: 4px;
-    color: black;
-    font-size: 1.5rem;
-    font: bold;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: none;
-}
-
-.dropdown-menu {
-  height: 0;
+.section-1 {
   overflow: hidden;
-  opacity: 0;
-  transition: height 0.1s ease, opacity 0.1s ease;
-  list-style: none; 
-  padding: 0; /* Removes extra padding around the list */
-  margin: 0; /* Removes any extra margin around the list */
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; 
+  margin-bottom: 0;
+}
+  .video-container {
+    width: 100vw;
+    height: 100vh; 
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+  }
+    .video {
+      width: 100vw;
+      height: 100vh; 
+      object-fit: cover;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      opacity: 70%;
+    }
+    .video {
+      width: 100vw; /* Match the viewport width */
+      height: 100vh; /* Match the viewport height */
+      object-fit: cover; /* Ensures the video covers the container */
+      position: absolute; /* Keeps the video positioned correctly */
+      top: 0;
+      left: 0;
+    }
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Covers the entire container */
+      background: linear-gradient(to top, rgba(6, 2, 2, 0.33), rgba(255, 255, 255, 0)); /* Gradient effect */
+      z-index: 1;
+    } 
+    .video-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 2; /* Ensures text appears above overlay */
+    }
+    .video-overlay-text h1 {
+      font-size: 70px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      font-family: "Montserrat", serif;
+    }
+    .video-overlay-text h4 {
+      font-size: 35px;
+      font-weight: 400;
+      font-family: "Montserrat", serif;
+      line-height: 55px;
+    }
 
-  }
+.section-2{
+  height: 50vh;
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 
-  .dropdown-menu.show {
-    height: auto; /* Or a fixed height, like 150px */
-    opacity: 1;
-  }
 
-  .dropdown-menu li {
-    opacity: 0;
-    transform: translateY(-10px); /* Start slightly above their final position */
-    transition: opacity 0.5s ease, transform 0.8s ease; /* Smooth transition effect */
-    margin: 9px 0; /* Adds spacing between list items */
-  padding: 0;
-  display: block;
-  }
- 
-  .dropdown-menu.show li {
-    opacity: 1;
-    transform: translateY(0);
-   
-  }
-  
-  .dropdown-menu.show li:nth-child(1) {
-    transition-delay: 0.2s;
-  }
-  .dropdown-menu.show li:nth-child(2) {
-    transition-delay: 0.4s;
-  }
-  .dropdown-menu.show li:nth-child(3) {
-    transition-delay: 0.6s;
-  }
-
-.home-button:hover, .services-button:hover, .customers-button:hover {
-    color:  #610015; /* Oxblood color for the text */
-    transition: color 0.2s ease;
 }
 
-.dropdown-menu li:hover {
-    color:  #610015; /* Oxblood color for the text */
-    /*transition: color 0.2s ease;*/
+.section2-text {
+  width: 100%;
+}
+.section2-text h1{
+  color: white;
+  font-size: 70px;
+  margin-top: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
 }
 
-.dropdown-button:hover {
-    color:   #610015; /* Optional: changes text color for better contrast */
-    border: 1px solid white; /* Optional: adds a border for visual clarity */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
-  }
-
-/* Homepage Container */
-.homepage {
-    height:90vh;
-    overflow: scroll;
-    scroll-snap-type: y mandatory;
-
-  }
-  
-  /* Snapping Sections */
-  .section {
-    scroll-snap-align: start; 
-    width: 100vw; /* Full width of the viewport */
-    height: 90vh; /* Full height of the viewport */
+  .scroll-container2 {
+    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    position: relative;
-   
+    background-color: black;
+  }
+  .section2-row {
+    display: flex;
+    width: 90%;
+    opacity: 0; /* Start hidden */
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+  }
+  .section2 {
+    width: 30%;
+    height: 400px; /* Adjust size */
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-right: 60px;
     
   }
-  
-  /* section oooonnnnneeee */
-  .section-1 {
-    display:flex;
-    align-items: center;
-    overflow: hidden;
+  .box-left, .box-middle, .box-right{
+    transform: translateX(-150%);
+    display: flex;
     flex-direction: column;
+    height: 500px;
   }
 
-  .video-container {
-    width: 105%; /* Full width */
-    overflow: hidden;
-    height: 80vh;
-    position: relative; /* Allows positioning relative to the parent */
-    top: 0; /* Moves the child to the top of the parent */
-    left: 0; 
-    background-color: black;
-}
-  
-.video {
-    width: 105%;
-    object-fit: cover; /* Ensures the video fills the container */
-    padding: 0; /* Remove any padding */
-    margin: 0; /* Remove any margin */
-    opacity: 70%;
-}
-
-.video-container::after {
-    content: ''; /* Creates an empty pseudo-element */
-    position: absolute; /* Position it relative to the .video-container */
-    bottom: 0; /* Attach to the bottom of the container */
-    left: 0; /* Aligns with the container's left edge */
-    width: 100%; /* Covers the full width of the container */
-    height: 10%; /* Adjust the height of the gradient */
-    background: linear-gradient(to bottom, transparent, white); /* Gradient effect */
-    pointer-events: none; /* Ensures overlay doesn’t block video interactions */
-    z-index: 1; /* Places the gradient above the video */
-}
-
-.gradient-overlay {
-    position: absolute; /* Positioned over the video */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0%; 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgb(255, 255, 255)); 
-  } 
-
-
-/* Video Container */
-.video-container {
-  position: relative; /* Ensures text overlay is positioned relative to the video */
-  width: 100%; /* Full width */
-  height: 100vh; /* Full height to cover the viewport */
-  overflow: hidden; /* Prevents content overflow */
-}
-
-/* Background Video */
-.background-video {
-  width: 100%; /* Stretches video to full width */
-  height: 100%; /* Stretches video to full height */
-  object-fit: cover; /* Ensures the video covers the entire container */
-}
-
-/* Text Overlay */
-.video-overlay-text {
-  position: absolute; /* Positioned over the video */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjusts for perfect centering */
-  text-align: center; /* Center-align text */
-  color: white; /* White text for visibility */
-  z-index: 1; /* Ensures text appears above the video */
-  padding: 20px; /* Adds space around the text */
-  border-radius: 10px; /* Smooth, rounded corners */
- 
-}
-
-/* Styling for Individual Headings */
-.video-overlay-text h1 {
-  font-size: 56px; /* Prominent heading */
-  font-weight: 700; /* Bold text */
-}
-
-.video-overlay-text h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 240px;
-}
-
-.video-overlay-text h4 {
-  font-size: 35px;
-  font-weight: 400;
-  margin: 50px 0;
-  font-style: italic;
-}
-
-  
-  /* Individual Sections */
-  .section1-bottomcontainer{
-    margin-top: 660px;
-    display: flex; /* Enables Flexbox layout */
-    justify-content: space-evenly; /* Even horizontal spacing between sections */
-    align-items: center; /* Aligns items vertically within the container */
+  .leftbox-text, .middlebox-text, .rightbox-text {
+   line-height: 10px;
+   text-align: center;
   }
 
-  .bottom-section{
-    display: flex; /* Flexbox for horizontal alignment of items */
-    flex-direction: column; /* Ensures content (image and h1) is side-by-side horizontally */
-    align-items: center; /* Centers content vertically within the section */
-    padding: 15px;
-    border: 2px solid transparent; /* Default transparent border */
-    border-radius: 10px; /* Rounded corners for the box */
-    transition: all 0.3s ease; /* Smooth transition on hover */
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-bottom: 75px;
-    transition: transform 0.3s ease;
-    overflow: hidden;
-  }
-
-  .bottom-section img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 1px; /* Space between image and heading */
-  }
-  
-  .bottom-section h1 {
-    font-size: 1.5rem; /* Adjust font size */
-    color: #333; /* Heading color */
-    z-index: 2;
-  }
-
-  .bottom-section::before {
-    content: ""; /* Create the burst effect */
-    position: absolute; /* Position the overlay within the section */
-    width: 0; /* Start with no size */
-    height: 0; /* Start with no size */
-    background: radial-gradient(circle,rgba(168, 54, 63, 0.8) -50%, rgba(255, 255, 255, 0) 60%);
-    transform: translate(0%, -18%); /* Center the burst */
-    border-radius: 50%; /* Ensure it's circular */
-    opacity: 0; /* Hidden initially */
-    transition: all 0.4s ease; /* Smooth transition for size and opacity */
-    z-index: 1; /* Ensure the burst is behind the text */
-  }
-
-  .bottom-section:hover::before {
-    width: 400px; /* Make the burst large enough to cover the entire section */
-    height: 400px; /* Ensure full coverage */
-    opacity: 1; /* Make it visible */
-  }
-
-  .section section-2 {
-    background-color: pink;
-    color: white;
-  }
-
-.section2 {
-    display: flex; /* Enable Flexbox for column layout */
-    flex-direction: row; /* Align columns side by side */
-    justify-content: space-evenly; /* Space columns evenly */
-    height: 100%;   
-}
-
-.section2-column1 {
-    text-align: center; /* Align content within the column */
-    margin-top: 140px;
-    background-color: white;
-    width: 45vw;
-}
-
-.section2-column1 h1 {
+  .rightbox-text p {
+    line-height: 30px;
+    font-size: 20px;
     text-align: center;
-    font-size: 3.2rem;
+    margin-top: 0;
+    width: 500px;
+  }
 
+.section-3 {
+  height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  overflow: hidden;
 }
+  .section3-header {
+    color: black;
+    font-size: 55px;
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; 
+  }
+  .section3-container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+  }
+  .section3-img{
+    padding: 100px;
+  }
+    .services-dropdown-container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      gap: 20px;
+      transition: gap 0.3s ease; 
+    }
+    .services-dropdown-container.dropdown-container-open {
+      gap: 10px; /* Reduce the gap dynamically when any section is open */
+    }
+    /* Individual Service Item */
+    .dropdown-service-item {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden; /* Prevents content overflow */
+    }
+    .dropdown-service-content {
+      height: 0; /* Start with no height */
+      overflow: hidden; /* Prevent overflow when closed */
+      background-color: #fafafa;
+      transition: height 0.3s ease, padding 0.3s ease; /* Smooth opening/closing */
+      color: rgb(92, 91, 91);
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-decoration: none;
+    }
+    .dropdown-service-content.open {
+      height: auto; /* Allow full height for content */
+      padding: 15px; /* Add padding for readability */
+      max-height: 900px; /* Allow content to expand */
+    }
+    .dropdown-service-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 28px ;
+      font-weight: bold;
+      height: 45px;
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    }
+    .dropdown-service-title:hover {
+      background-color: #f0f0f0;
+    }
+    .service-arrow {
+        padding: 10px;
+      font-size: 25px;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
+    }
+    .service-arrow.open {
+      transform: rotate(180deg); /* Flip the arrow */
+    }
+    /* Dropdown Content */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .dropdown-service-content h3 {
+      margin: 5px 0; /* Tighten space above and below headings */
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+      text-decoration: none;
+    }
+    .dropdown-service-content p {
+      text-align: left;
+      font-size: 19px;
+      margin: 3px 0; /* Reduce space between paragraphs */
+      color: #4f453e;
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+      text-decoration: none;
+    }
 
-.section2-column1 h2 {
-    font-size: 2rem;
-}
+    .section3-img2 {
+      width: 104%;
+      
+    }
 
-.section2-column1 h3{
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 13px;
-}
+    .section-4 {
+      height: 140vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+    }
 
-.section2-column2 {
-    height: 100%;
-    margin-top: 100px;
-    padding: 15px; /* Add spacing inside each column */
-    text-align: left; /* Align content within the column */
-}
+    .section4-photo {
+      margin-top: 180px;
+      height: 700;
+      width: 1800;
+    }
 
-
-.section2-gradient-overlay {
-    position: absolute; 
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%; 
-    background: linear-gradient(to top, rgb(102, 34, 34), rgba(255, 255, 255, 0)); 
-} 
+    .section4-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+      width: 60%;
+      font-family: "Montserrat", serif;
+      
   
-  .section section-3 {
-    background-color: #00a86b;
-    color: white;
+    }
+    .section4-text h1 {
+      font-size: 70px;
+      font-family: "Montserrat", serif;
+  
+    }
+
+    .section4-text h2 {
+      font-size: 35px;
+      text-align: center;
+      font-family: "Montserrat", serif;
+    }
+
+
+  
+  .section-5 {
+    display: flex; /* Aligns all child elements horizontally */
+    justify-content:center; /* Ensures equal spacing between sections */
+    align-items: center; /* Centers content vertically */
+  }
+  
+  .section5 {
+    display: flex; /* Ensures left5 and middle5 are horizontally aligned */
+    justify-content: center; /* Centers all items within this container */
+    align-items: center; /* Centers items vertically */
+
+    gap: 150px; /* Removes any additional space between middle and left sections */
+
+  }
+  
+  .left5, .middle5 {
+    flex: 1; /* Ensures equal space for both left5 and middle5 */
+    margin: 0; /* Removes any margin that could create gaps */
+    color: white; /* White text for readability */
+    text-align: left; /* Centers text */
+    border-radius: 10px; /* Adds rounded corners */
+    height:400px;
+    width: 400px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
   }
 
-/* Dropdown Container */
-.services-dropdown-container {
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  gap: 20px;
-  transition: gap 0.3s ease; /* Smoothly transitions spacing */
-}
-
-.services-dropdown-container.dropdown-container-open {
-  gap: 10px; /* Reduce the gap dynamically when any section is open */
-}
-
-/* Individual Service Item */
-.dropdown-service-item {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden; /* Prevents content overflow */
-}
-
-
-
-
-.dropdown-service-content {
-  height: 0; /* Start with no height */
-  overflow: hidden; /* Prevent overflow when closed */
-  background-color: #fafafa;
-  transition: height 0.3s ease, padding 0.3s ease; /* Smooth opening/closing */
-  color: rgb(92, 91, 91);
-
-}
-
-.dropdown-service-content.open {
-  height: auto; /* Allow full height for content */
-  padding: 15px; /* Add padding for readability */
-  max-height: 900px; /* Allow content to expand */
-}
-
-
-/* Title (Clickable Area) */
-.dropdown-service-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 28px ;
-  font-weight: bold;
-  height: 45px;
-}
-
-.dropdown-service-title:hover {
-  background-color: #f0f0f0;
-}
-
-/* Arrow Icon */
-.service-arrow {
-    padding: 10px;
-  font-size: 25px;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-
-.service-arrow.open {
-  transform: rotate(180deg); /* Flip the arrow */
-}
-
-/* Dropdown Content */
-
-/* Fade-in Animation for Content */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+  .right5 {
+    margin-top: 50px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .footerlogo{
+    margin: 35px 0;
   }
-}
-
-.dropdown-service-content h3 {
-  margin: 5px 0; /* Tighten space above and below headings */
-}
-
-.dropdown-service-content p {
-  text-align: left;
-  font-size: 19px;
-  margin: 3px 0; /* Reduce space between paragraphs */
-  color: dark grey;
-
-}
-
-/* Main Container */
-.section3-container {
-  display: flex; /* Creates a row layout */
-  flex-direction: row;
-  justify-content: space-between; /* Space between dropdown and image */
-  align-items: center; /* Center vertically */
-  width: 100%; /* Full width of the row */
-  height: 100vh; /* Full viewport height */
-  padding: 200px; /* Optional: Adds padding inside the row */
-  box-sizing: border-box; /* Ensure padding is included in width/height */
-}
-
-/*  Dropdown */
-.service-dropdown {
-  flex: 1; /* Take up equal space with the image */
-  display: flex;
-  justify-content: center; /* Center the dropdown horizontally */
-  align-items: center; /* Center the dropdown vertically */
-}
-
-/*  Image */
-.service-img {
-  flex: 1; /* Allow the left side to take up equal space */
-  display: flex;
-  flex-direction: column; /* Stack the header and image vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center-align the text */
-
-}
-
-.service-img h1 {
-  font-size: 60px;
-  margin-bottom: 0;
-}
-
-.service-img img {
-  max-width: 100%; /* Scale image proportionally to fit */
-  max-height: 80vh; /* Keep image from overflowing the viewport */
-  object-fit: contain; /* Ensure the image doesn’t distort */
-  padding: 0;
-}
 
 
-
-
-
-
-
-  .section section-4 {
-    background-color: #0044cc;
-    color: white;
+  .left5 h2 {
+    margin-top: 80px;
+    font-size: 30px;
   }
-/* Three-Row Section */
-.three-row-section {
-  display: flex; /* Enable Flexbox */
-  flex-direction: column; /* Stack rows vertically */
-  height: 90vh; /* Make the section 90% of the viewport height */
-  width: 100%; /* Full width */
-  padding: 2px; /* Remove padding unless needed */
-  box-sizing: border-box; /* Include padding/border in dimensions */
+
+  .left5 p {
+    font-size: 26px;
+    line-height: 5px;
+  }
+
+  .middle5 h1 {
+    font-size: 40px;
+  }
+
+  .middle5 p {
+    font-size: 26px;
+    line-height: 15px;;
+  }
+  
+ .google-map {
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
  
-}
-
-/* Individual Rows */
-.row {
-  display: flex; /* Flexbox for rows */
-  flex: 1; /* Make all rows equally fill their parent */
-  flex-direction: row; /* Stack sub-rows horizontally within each row */
-  gap: 0px; /* Space between sections inside each row */
-  width: 100%; /* Full width of rows */
-  background-color: black; /* Background for the row */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.794); /* Optional shadow for depth */
-
-}
-
-/* Sub-Sections (3 Equal Sections Per Row) */
-.sub-row {
-  flex: 1; /* Make all sub-sections equal */
-  display: flex; /* Flexbox for centering content */
-  flex-direction:column;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  background-color: #ffffff; /* Background color for each section */
-
-  padding: 0px; /* Add padding for content */
-  text-align: center; /* Center text */
-}
-
-/* Optional Content Styling */
-
-.sub-row h1 {
-  font-size: 70px; /* Adjust heading size */
-  margin: 0; /* Remove default margin */
-  line-height: 100px;
-
-}
-
-
-.sub-row h3 {
-  font-size: 18px; /* Adjust heading size */
-  margin: 0; /* Remove default margin */
-}
-
-.sub-row p {
-  font-size: 16px; /* Adjust paragraph size */
-  margin: 5px 0; /* Add spacing between text lines */
-  line-height: 1.5; /* Improve readability */
-}
-
-
-
-
-
-
-
-  .section section-5 {
-    background-color: #0044cc;
-    color: white;
   }
   
-  .google-map {
-    margin: 5%;
-}
-
-
-
-
-
+  
 
 
 
@@ -866,10 +635,11 @@ ul {
   /* Footer */
 
 .footer {
-    background-color: #610015;
+    background-color:black;
     width: 100%;
     height: 100px;
     bottom: 0;
+    color: white;
 }
 
 
@@ -918,4 +688,114 @@ section button
 }
 
   
+
+  .section1-bottomcontainer{
+
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+  }
+
+  .bottom-section{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding: 15px;
+    border: 2px solid transparent; 
+    border-radius: 10px; 
+    transition: all 0.3s ease; 
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 75px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+
+  .bottom-section img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1px; 
+  }
+  
+  .bottom-section h1 {
+    font-size: 1.5rem; 
+    color: #333; 
+    z-index: 2;
+  }
+
+  .bottom-section::before {
+    content: ""; 
+    position: absolute; 
+    width: 0; 
+    height: 0; 
+    background: radial-gradient(circle,rgba(168, 54, 63, 0.8) -50%, rgba(255, 255, 255, 0) 60%);
+    transform: translate(0%, -18%);
+    border-radius: 50%; 
+    opacity: 0; 
+    transition: all 0.4s ease; 
+    z-index: 1; 
+  }
+
+  .bottom-section:hover::before {
+    width: 400px; 
+    height: 400px; 
+    opacity: 1; 
+  }
+
+  .section section-2 {
+    background-color: pink;
+    color: white;
+  }
+
+.section2 {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    height: 100%;   
+}
+
+.section2-column1 {
+    text-align: center; 
+    margin-top: 140px;
+    background-color: white;
+    width: 45vw;
+}
+
+.section2-column1 h1 {
+    text-align: center;
+    font-size: 3.2rem;
+
+}
+
+.section2-column1 h2 {
+    font-size: 2rem;
+}
+
+.section2-column1 h3{
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 13px;
+}
+
+.section2-column2 {
+    height: 100%;
+    margin-top: 100px;
+    padding: 15px; 
+    text-align: left; 
+}
+
+
+.section2-gradient-overlay {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%; 
+    background: linear-gradient(to top, rgb(102, 34, 34), rgba(255, 255, 255, 0)); 
+} 
+  
+  
 */
+
+
