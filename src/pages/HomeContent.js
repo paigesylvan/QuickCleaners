@@ -28,7 +28,7 @@ return (
         <h1> Our Services</h1>
       </div>
       <div className='section2-container'>
-          <img class='section2-img' src={servicesimg} style={{width: '38vw', height: '50vh', padding:'100px'}}/> 
+          <img class='section2-img' src={servicesimg} alt='image' style={{width: '38vw', height: '50vh', padding:'100px'}}/> 
           <ServiceDropdown class='service-dropdown'/>
       </div>
     </section>
@@ -36,8 +36,8 @@ return (
       <FloatingSections/>
     </section>
     <section className='section-4' >
-    <img src={storyimg} className='section4-photo' ></img>
-    <img src={storyimg2} className='section4-photo2' ></img>
+    <img src={storyimg} className='section4-photo' alt='image'></img>
+    <img src={storyimg2} className='section4-photo2'alt='image' ></img>
     <div className='section4-text'>
       <h1>Our Story</h1>
       <h2> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
       <div className="footer" style={{background:'black'}}>
          <div className="left5">
-          <img src={footerimg} height={'130px'} width={'240px'} className='footerlogo'></img>
+          <img src={footerimg} height={'130px'} width={'240px'} alt='img' className='footerlogo'></img>
           <p>2177 Silvernail Rd,</p>
           <p>Pewaukee, WI 53072</p>
           <h2>(262) 549-9477</h2>
