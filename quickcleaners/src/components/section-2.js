@@ -101,12 +101,9 @@ const ServicesDropdown = () => {
   ];
 
   return (
-    <div className={`services-dropdown-container ${
-        openService !== null ? 'dropdown-container-open' : ''
-      }`}>
+    <div className={`services-dropdown-container ${ openService !== null ? 'dropdown-container-open' : ''}`}>
       {servicesData.map((service) => (
         <div key={service.id} className={`dropdown-service-item ${openService === service.id ? 'open' : 'closed'}`}>
-          {/* Title */}
           <div
             className="dropdown-service-title"
             onClick={() => toggleService(service.id)}
@@ -118,8 +115,6 @@ const ServicesDropdown = () => {
               ▼
             </span>
           </div>
-
-          {/* Content */}
           <div
             className={`dropdown-service-content ${
               openService === service.id ? 'open' : ''

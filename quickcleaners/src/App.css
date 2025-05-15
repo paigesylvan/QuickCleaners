@@ -322,8 +322,8 @@
   
   @media (max-width: 1780px) {
     .header-logo{
-      width: 415px;
-      height: 75px;
+      width: 600px;
+      height: 100px;
     }
 
     .video-overlay-text{
@@ -331,7 +331,7 @@
     }
 
     .video-overlay-text h1 {
-      font-size: 40px;
+  
       margin-top: 170px;
       margin-bottom: 100px;
     }
@@ -344,7 +344,6 @@
     }
 
     .section2-header{
-      font-size: 40px;
       margin-bottom: 20px;
     }
 
@@ -352,12 +351,8 @@
       display: none;
     }
 
-    .services-dropdown-container {
-      width: 650px;
-    }
-
     .section-3{
-      height: 130vh;
+      height: 115vh;
     }
 
       .section3-row {
@@ -365,30 +360,75 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
-        gap: 60px;
+        gap: 100px;
+        height: 70%;
       }
 
       .box-left, .box-middle, .box-right{
         transform: translateX(-150%);
         display: flex;
         flex-direction: column;
-        height: 400px;
-        width: 500px;
+      
+        width: 100%;
         
       }
 
+      .section-4{
+        height: auto;
+      }
       .section4-photo{
         display: none;
       }
     
       .section4-photo2 {
         display: block;
-        width: 600px;
-        height: 500px;
+        width: 70vw;
+        height: auto;
         margin-right: 6px;
       }
+  }
 
-      
+  @media (max-width: 1750px) {
+    .right5{
+      display: none;
+    }
+  }
+
+  @media (max-width: 1312px) {
+    .right5{
+      display: none;
+    }
+
+    .footer {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      justify-content: flex-start; 
+      padding:0;
+      margin: 0;
+      padding-left: 80px; 
+    }
+  
+    .leftbox, .middle {
+  
+      text-align: left; 
+      width: 100%; 
+
+    }
+
+    .footerlogo{
+      padding-top: 50px;
+
+    }
+
+    .left5 h2{
+      margin-top: 50px;
+    }
+
+    .middle5 {
+      padding-bottom: 50px;
+    }
 
   }
 
@@ -536,11 +576,9 @@
             height: auto;
             display: flex;
             flex-direction: row;
-
-            height: auto; /* Instead of 70vh */
-            padding: 2px; /* Reduce padding */
-        
-            justify-content: center; /* Keeps everything balanced */
+            height: auto; 
+            padding: 2px; 
+            justify-content: center; 
             overflow: hidden;
           }
 

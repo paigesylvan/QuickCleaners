@@ -10,10 +10,8 @@ const Header = () => {
   
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        // Scrolling down - hide header
         header.style.transform = "translateY(-100%)";
       } else {
-        // Scrolling up - show header
         header.style.transform = "translateY(0)";
       }
       lastScrollY = window.scrollY;
