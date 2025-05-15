@@ -1,4 +1,3 @@
-
 {
   "name": "quickcleaners",
   "version": "0.1.0",
@@ -43,9 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "react-router-dom": "^6.23.0"
   }
-
 }
-
-
