@@ -237,7 +237,7 @@
   }
 
 .section-4 {
-  height: 140vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;  
@@ -260,6 +260,7 @@
   justify-content: center;
   width: 60%;
   font-family: "Montserrat", serif;
+  margin-bottom: 100px;
     }
   .section4-text h1 {
     font-size: 70px;
@@ -343,10 +344,27 @@
       width: 90%;
     }
 
+    .section-2{
+      height: auto;
+      margin-bottom: 200px;
+    }
+
+    .service-dropdown{
+      height: 100%;
+   
+    }
     .section2-header{
       margin-bottom: 20px;
     }
 
+    .section2-container{
+      height: 100%;
+      margin-bottom: 200px;
+    }
+
+    .services-dropdown-container {
+      height: 100%;
+    }
     .section2-img{
       display: none;
     }
@@ -362,6 +380,8 @@
         align-items: center;
         gap: 100px;
         height: 70%;
+        padding: 70px;
+
       }
 
       .box-left, .box-middle, .box-right{
@@ -374,6 +394,7 @@
       }
 
       .section-4{
+        margin-top: 30%;
         height: auto;
       }
       .section4-photo{
