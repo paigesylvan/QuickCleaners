@@ -5,16 +5,20 @@ import headerimg from '../styles/images/header-img.png'
 const Header = () => {
 
   useEffect(() => {
-    let lastScrollY = 0;
+    let lastScrollY = window.scrollY;
     const header = document.querySelector(".header");
+  
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
+        // Scrolling down - hide header
         header.style.transform = "translateY(-100%)";
       } else {
+        // Scrolling up - show header
         header.style.transform = "translateY(0)";
       }
       lastScrollY = window.scrollY;
     };
+  
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -22,9 +26,7 @@ const Header = () => {
   }, []);
   return (
     <div className="header">
-      <div className="header-logo">
-        <img src={headerimg} alt='logo' style={{width: '650px', height: '95px'}}/> 
-      </div>
+        <img src={headerimg} alt='logo'className="header-logo" /> 
     </div>
   )
 }
