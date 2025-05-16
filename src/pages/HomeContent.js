@@ -14,7 +14,7 @@ return (
   <div class="homepage">
     <section className="section-1" >
       <div className='video-container' >
-           <video className='video' loop autoPlay='true' muted><source src={Movie} type="video/mp4"/></video>
+           <video className='video' loop playsinline preload="auto" autoPlay='true' muted><source src={Movie} type="video/mp4"/></video>
            <div className='gradient-overlay'></div>
             <div className="video-overlay-text">
               <h1 >Distinctive Care For All That You Wear</h1>

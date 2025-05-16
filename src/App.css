@@ -321,7 +321,7 @@
  
   }
   
-  @media (max-width: 1600px) {
+  @media (max-width: 1200px) {
     .header-logo{
       width: 500px;
       height:70%;
@@ -594,10 +594,9 @@
           }
 
           .footer {
-            height: 500px;
+            height: 300px;
             display: flex;
             flex-direction: row;
-            height: auto; 
             padding: 2px; 
             justify-content: center; 
             overflow: hidden;
