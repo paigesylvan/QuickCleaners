@@ -242,14 +242,15 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
+  margin-bottom: 300px;  
 }
 .section4-photo {
     margin-top: 180px;
     height: 700;
     width: 900;
     display:block;
-    margin-bottom: 300px;
+    
   }
 
   .section4-photo2{
@@ -300,7 +301,7 @@
     margin-top: 50px;
   }
   .footerlogo{
-    margin: 35px 0;
+    margin-bottom: 35px;
   }
   .left5 h2 {
     margin-top: 80px;
@@ -324,7 +325,7 @@
  
   }
   
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     .header-logo{
       width: 500px;
       height:70%;
