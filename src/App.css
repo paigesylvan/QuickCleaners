@@ -15,8 +15,8 @@
 }
 
 .header-logo{
-  width: 750px;
-  height:100px;
+  width: 28vw;
+  height:70%;
 }
 .section-1 {
   position: relative;
@@ -321,12 +321,12 @@
  
   }
   
-  @media (max-width: 1780px) {
+  @media (max-width: 1380px) {
     .header-logo{
-      width: 600px;
-      height: 100px;
+      width: 500px;
+      height:70%;
     }
-
+    
     .video-overlay-text{
       width: 90%;
     }
