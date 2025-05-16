@@ -253,7 +253,7 @@
 .section4-photo {
     margin-top: 180px;
     height: 700;
-    width: 900;
+    width: 90%;
     display:block;
     
   }
@@ -540,6 +540,16 @@
 
 /* Breakpoint for screens <= 1312px */
 @media (max-width: 1312px) {
+
+  .section-3{
+    margin-top:  27.78vh;
+    margin-bottom:  37.78vh;
+  }
+
+  .section-4 h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
   .right5 {
     display: none;
   }
