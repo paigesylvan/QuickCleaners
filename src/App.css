@@ -321,7 +321,7 @@
  
   }
   
-  @media (max-width: 2000px) {
+  @media (max-width: 1600px) {
     .header-logo{
       width: 500px;
       height:70%;
