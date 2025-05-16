@@ -594,7 +594,7 @@
           }
 
           .footer {
-            height: auto;
+            height: 500px;
             display: flex;
             flex-direction: row;
             height: auto; 
