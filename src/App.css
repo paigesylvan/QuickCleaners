@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .header {
   position: fixed;
@@ -100,6 +104,7 @@
     display: flex; 
     flex-direction: row;
     align-items: center; 
+    height: 100%;
   }
     .services-dropdown-container {
       width: 100%;
@@ -227,14 +232,14 @@
     width: 700px;
   }
   .leftbox-text, .middlebox-text, .rightbox-text {
-   line-height: 10px;
+   line-height: 1.3;
    text-align: center;
   }
   .rightbox-text p {
     line-height: 30px;
     font-size: 20px;
     text-align: center;
-    margin-top: 0;
+    margin-top: 10px;
     width: 500px;
   }
 
@@ -269,6 +274,7 @@
   .section4-text h1 {
     font-size: 70px;
     font-family: "Montserrat", serif;
+    margin-bottom: 10%;
   }
   .section4-text h2 {
     font-size: 35px;
@@ -295,6 +301,7 @@
     width: 400px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
+    margin-top: 30px;
   }
 
   .right5 {
@@ -304,19 +311,20 @@
     margin-bottom: 35px;
   }
   .left5 h2 {
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 30px;
   }
   .left5 p {
     font-size: 26px;
-    line-height: 5px;
+    line-height: 1.4;
   }
   .middle5 h1 {
     font-size: 40px;
+    margin-bottom: 10px;
   }
   .middle5 p {
     font-size: 26px;
-    line-height: 15px;;
+    line-height: 1.5;
   }
  .google-map {
     height: 400px;
@@ -389,6 +397,7 @@
   .left5, .middle5 {
     width: 100%;
     margin: 10px 0;
+
   }
 
   .google-map {
@@ -556,6 +565,7 @@
 
   .footerlogo {
     padding-top: 50px;
+    height: auto;
   }
 
   .left5 h2 {
