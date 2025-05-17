@@ -198,8 +198,11 @@
 }
 
   .scroll-container3 {
-    align-self: center;
     background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .section3-row {
     display: flex;
@@ -210,7 +213,8 @@
     opacity: 0; 
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     text-decoration: none;
-    margin-left: 50px;
+    max-width: 1200px; /* This keeps row from going full-screen wide */
+    margin: 0 auto; /* Centers horizontally */
   }
   .section3 {
 
@@ -228,10 +232,11 @@
     display: flex;
     flex-direction: column;
     height: 500px;
-    width: 600px;
     min-width: 600px;
     margin-left: 60px;
     margin-right: 60px;
+    width: 25%; 
+    max-width: 300px;
   }
   .leftbox-text, .middlebox-text, .rightbox-text {
    line-height: 1.3;
