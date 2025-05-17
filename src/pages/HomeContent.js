@@ -1,7 +1,7 @@
 import React from 'react';
-import Movie from '../styles/videos/movie1.mp4';
 import ServiceDropdown from '../components/section-2'
 import FloatingSections from '../components/section-3'
+import Video from '../components/video'
 import storyimg from '../styles/images/story-img.png'
 import storyimg2 from '../styles/images/story-img2.png'
 import servicesimg from '../styles/images/services-img.png'
@@ -14,7 +14,7 @@ return (
   <div class="homepage">
     <section className="section-1" >
       <div className='video-container' >
-           <video className='video' loop playsinline preload="auto" autoPlay='true' muted><source src={Movie} type="video/mp4"/></video>
+           <Video/>
            <div className='gradient-overlay'></div>
             <div className="video-overlay-text">
               <h1 >Distinctive Care For All That You Wear</h1>
