@@ -19,7 +19,7 @@ return (
             <div className="video-overlay-text">
               <h1 >Distinctive Care For All That You Wear</h1>
               <h4>From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care</h4>
-              <h4>Trust us to bring out the best in what you wear</h4>
+              <h5>Trust us to bring out the best in what you wear</h5>
             </div>   
       </div>
     </section>
