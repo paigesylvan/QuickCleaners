@@ -42,21 +42,21 @@ const FloatingSections = () => {
   return (
     <section className="scroll-container3">
       <div className="section3-row">
-        <div className="section3 box-left" style={{backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        <div className="section3 box-left" style={{ backgroundPosition: 'center'}}>
           <div className='leftbox-text'>
             <h1>All Work</h1>
             <h1>Done on</h1>
             <h1>Premise</h1>
           </div>
         </div>
-        <div className="section3 box-middle" style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="section3 box-middle" style={{ backgroundPosition: 'center' }}>
           <div className='middlebox-text'>
             <h1>We Accept</h1>
             <h1>Competitor</h1> 
             <h1>Coupons</h1>
           </div>
         </div>
-        <div className="section3 box-right" style={{backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="section3 box-right" style={{ backgroundPosition: 'center' }}>
           <div className='rightbox-text'>
             <h1>Loyalty</h1>
             <h1>Program</h1>

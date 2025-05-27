@@ -344,6 +344,9 @@
 /* Mobile Portrait (<= 480px) */
 @media (max-width: 480px) {
  
+  .header{
+    width: 100%;
+  }
   .header-logo {
     width: 50vw;
     height: 50%;
@@ -351,11 +354,11 @@
 
   .section-1 {
     height: 100vh;
-    top: 20%
   }
 
   .video-overlay-text h1 {
     font-size: 40px;
+    top: 10%;
   }
 
   .video-overlay-text h4 {
@@ -372,7 +375,10 @@
   }
 
   .dropdown-service-item {
-    height: 100px;
+    height: 40px;
+  }
+  .dropdown-service-title {
+    height: 40px;
   }
  
 
@@ -388,10 +394,10 @@
    line-height: 1.25;
    text-align: center;
    font-family: "Montserrat", serif;
-   font-size: 2em;
+   font-size: 1.6em;
   }
   .rightbox-text p {
-    line-height: .01;
+    line-height: 0;
     font-size: 10px;
     text-align: center;
     font-weight: 300;
@@ -404,7 +410,13 @@
   .left5, .middle5 {
     width: 100%;
     margin: 10px 0;
-    line-height: 30px;
+    
+  }
+
+  .left5 p, .middle5 p{
+    width: 100%;
+    margin: 10px 0;
+    line-height: 20px;
   }
 
   .google-map {
