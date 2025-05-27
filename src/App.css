@@ -343,13 +343,16 @@
  
 /* Mobile Portrait (<= 480px) */
 @media (max-width: 480px) {
+  *{
+    overflow:hidden;
+  }
   .header-logo {
     width: 50vw;
     height: 50%;
   }
 
   .section-1 {
-    height: 120vh;
+    height: 100vh;
   }
 
   .video-overlay-text h1 {
@@ -360,8 +363,39 @@
     font-size: 20px;
   }
 
+  .video-overlay-text h5 {
+    font-size: 20px;
+  }
+
   .section2-header {
     font-size: 30px;
+    top: 0;
+  }
+
+  .dropdown-service-title {
+    height: 70px;
+  }
+
+  .services-dropdown-container{
+    margin-bottom: 20%;
+  }
+
+  .box-left, .box-middle, .box-right{
+    width: 300px;
+    height: 300px;
+  }
+  .leftbox-text h1, .middlebox-text h1, .rightbox-text h1{
+   line-height: 1.25;
+   text-align: center;
+   font-family: "Montserrat", serif;
+   font-size: .2em;
+  }
+  .rightbox-text p {
+    line-height: .01;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 300;
   }
 
   .footer {
@@ -371,6 +405,7 @@
   .left5, .middle5 {
     width: 100%;
     margin: 10px 0;
+    line-height: 10px;
   }
 
   .google-map {
