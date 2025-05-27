@@ -28,7 +28,7 @@ return (
         <h1> Our Services</h1>
       </div>
       <div className='section2-container'>
-          <img class='section2-img' src={servicesimg} alt='image' style={{width: '38vw', height: '50vh', padding:'100px'}}/> 
+          <img class='section2-img' src={servicesimg} alt='image' style={{width: '34vw', height: '51vh'}}/> 
           <ServiceDropdown class='service-dropdown'/>
       </div>
     </section>
