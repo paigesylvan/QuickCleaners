@@ -221,9 +221,7 @@
     background: white;
     display: flex;
     justify-content: center;
-    
     font-weight: bold;
-
   }
   .box-left, .box-middle, .box-right{
     flex: 0 0 400px;    /* fixed width of 400px */
@@ -237,13 +235,13 @@
    line-height: 1.25;
    text-align: center;
    font-family: "Montserrat", serif;
-   font-size: 2em;
+   font-size: 3.2em;
   }
   .rightbox-text p {
-    line-height: 1.2;
+    line-height: .01;
     font-size: 20px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
     font-weight: 300;
   }
 

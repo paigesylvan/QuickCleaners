@@ -60,7 +60,9 @@ const FloatingSections = () => {
           <div className='rightbox-text'>
             <h1>Loyalty</h1>
             <h1>Program</h1>
-            <p>Spend more than $250 and receive 25% off dry cleaning & 10% off laundry for all future orders</p>
+            <p>Spend more than $250 and </p>
+            <p>receive 25% off dry cleaning </p>  
+            <p>& 10% off laundry for all future orders</p>
           </div>
         </div>
       </div>
