@@ -123,9 +123,7 @@
       gap: 20px;
       transition: gap 0.3s ease; 
     }
-    .services-dropdown-container.dropdown-container-open {
-      gap: 10px; 
-    } 
+  
     .dropdown-service-item {
       border: 1px solid #ddd;
       border-radius: 5px;
@@ -153,9 +151,9 @@
         background-color: #ffffff;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        font-size: 28px ;
+        font-size: 17px ;
         font-weight: bold;
-        height: 70px;
+        height: 40px;
         font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
       }
       .dropdown-service-title:hover {
@@ -187,7 +185,7 @@
         }
       .dropdown-service-content p {
         text-align: left;
-        font-size: 19px;
+        font-size: 15px;
         margin: 3px 0; 
         color: #4f453e;
         font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
@@ -225,7 +223,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 45px;
     font-weight: bold;
 
   }
