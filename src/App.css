@@ -235,7 +235,7 @@
     flex-direction: column;
     margin: 0 20px;     /* space between boxes */
   }
-  .leftbox-text, .middlebox-text, .rightbox-text {
+  .leftbox-text h1, .middlebox-text h1, .rightbox-text h1{
    line-height: 1.3;
    text-align: center;
    font-weight: 50;
