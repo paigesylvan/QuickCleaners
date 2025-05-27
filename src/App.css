@@ -343,9 +343,7 @@
  
 /* Mobile Portrait (<= 480px) */
 @media (max-width: 480px) {
-  *{
-    overflow:hidden;
-  }
+ 
   .header-logo {
     width: 50vw;
     height: 50%;
