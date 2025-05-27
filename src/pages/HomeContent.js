@@ -12,7 +12,7 @@ const Home = () => {
 
 return (
   <div class="homepage">
-    <section className="section-1" >
+    <section className="section-1 " >
       <div className='video-container' >
            <Video/>
            <div className='gradient-overlay'></div>
