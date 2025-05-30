@@ -23,8 +23,8 @@ const Header = () => {
     };
   }, []);
   return (
-    <div className="header">
-        <img src={headerimg} alt='logo'className="header-logo" /> 
+    <div className="header absolute top-0 w-full h-screen-6 lg:h-screen-8 flex justify-center items-center z-[999] bg-white shadow-lg transition-transform duration-300 ease-in-out">
+        <img src={headerimg} alt='logo'className="header-logo   w-96 h-12 lg:w-[600px] lg:h-20 " /> 
     </div>
   )
 }

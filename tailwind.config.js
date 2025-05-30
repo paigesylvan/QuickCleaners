@@ -11,8 +11,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        'screen-6': '6vh', // 20% of the viewport height
+        'screen-8': '8vh',
     },
+    fontFamily: {
+      roboto: ['Roboto', 'sans-serif'],
   },
   plugins: [],
+  variants: {},
 }
-
+}
+}

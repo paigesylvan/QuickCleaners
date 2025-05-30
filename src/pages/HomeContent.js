@@ -7,49 +7,52 @@ import storyimg2 from '../styles/images/story-img2.png'
 import servicesimg from '../styles/images/services-img.png'
 
 
+/** mt-[180px] block w-[90%] h-auto 
+   */
 
 const Home = () => {
 
 return (
   <div className="homepage">
-    <section className="section-1 md:h-auto sm:h-[auto] sm:overflow-hidden w-full" >
-      <div className='video-container' >
+    <section className="w-full relative flex flex-col overflow-hidden " >
+      <div className='relative w-screen h-screen bg-black overflow-hidden' >
            <Video/>
-           <div className='gradient-overlay'></div>
-            <div className="video-overlay-text lg:w-[90%] sm:w-[90%">
-              <h1 className="lg:mt-[170px] lg:mb-[100px] sm:text-[32px] sm:leading-[40px] sm:mb-[70px]">
-                Distinctive Care For All That You Wear</h1>
-              <h4 className="lg:text-[32px] lg:ml-[45px] lg:leading-[40px] lg:w-[90%]
-                       sm:text-[15px] sm:ml-[32px] sm:leading-[20px] sm:w-[80%]"
+           <div className='gradient-overlay relative w-full h-full bg-gradient-to-t from-[rgba(6,2,2,0.33)] to-transparent z-10'></div>
+            <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
+              <h1 className=" text-5xl font-bold font-serif lg:text-7xl 
+              ">  Distinctive Care For All That You Wear</h1>
+              <h4 className="text-3xl font-serif mt-36 lg:text-5xl lg:mt-28 lg:leading-[60px]"
               >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care</h4>
-              <h5 className="lg:text-[32px] lg:ml-[45px] lg:leading-[40px] lg:w-[90%]
-                       sm:text-[15px] sm:ml-[32px] sm:leading-[20px] sm:w-[80%]"
+              <h5 className="text-3xl font-serif mt-10 font-bold lg:text-5xl lg:mt-16"
               >Trust us to bring out the best in what you wear</h5>
             </div>   
       </div>
     </section>
-    <section className="section-2  lg:h-auto lg:mb-[200px] sm:flex sm:flex-col sm:items-center w-full" >
-      <div className='section2-header lg:mb-[20px] sm:text-[26px] sm:mb-[20px]'>
-        <h1> Our Services</h1>
+
+    <section className="flex flex-col items-center justify-center w-full " >
+      <div>
+        <h1 className='text-black text-5xl text-center font-sans font-bold mt-16 lg:text-6xl'> Our Services</h1>
       </div>
-      <div className="section2-container " >
+      <div className="section2-container flex flex-row items-center justify-center gap-20 mt-20 mb-60" >
         <img className="section2-img hidden lg:block"
             src={servicesimg} alt="image" style={{ width: "34vw", height: "51vh" }}/>
         <ServiceDropdown className="service-dropdown lg:h-full" />
       </div>
     </section>
-    <section className='section-3 flex flex-col m-auto md:flex-row w-full' style={{background:'black'}}>
+
+
+    <section  style={{background:'black'}}>
       <FloatingSections/>
     </section>
-    <section className='section-4 w-full' >
-    <img src={storyimg} className='section4-photo hidden lg:block ' alt='owner-image'></img>
-    <img src={storyimg2} className='section4-photo2  md:block lg:hidden w-[370px] h-[270px] mr-[6px]' alt='owner-image-single' ></img>
-    <div className='section4-text
-    sm:flex sm:flex-col sm:items-start sm:justify-center sm:w-[90%] font-montserrat'>
-      <h1 className="sm:text-[40px] font-montserrat">Our Story</h1>
-      <h2 className="sm:text-[10px] font-montserrat"> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.
+
+    <section className='flex flex-col items-center mb-[100px]' >
+    <img src={storyimg} className=' hidden lg:block p-20' alt='owner-image'></img>
+    <img src={storyimg2} className='block lg:hidden p-20' alt='owner-image-single' ></img>
+    <div className='flex flex-col items-center justify-center font-serif '>
+      <h1 className="text-6xl font-serif font-bold text-center lg:text-7xl">Our Story</h1>
+      <h2 className="text-2xl font-serif mt-11 w-[85%] lg:text-4xl lg:w-[69%] text-center"> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.
       </h2>
-      <h2 className="sm:text-[10px] font-montserrat"> - Sandy & staff at Quick Cleaners & Laundry</h2>
+      <h2 className="text-2xl font-serif mt-16 lg:text-4xl"> - Sandy & staff at Quick Cleaners & Laundry</h2>
     </div>
     </section>
   </div>
