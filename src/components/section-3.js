@@ -42,26 +42,26 @@ const FloatingSections = () => {
   return (
     <section className="scroll-container3 flex item-center justify-center font-serif">
       <div className="section3-row  items-center flex flex-col m-auto lg:flex-row mt-10 mb-10">
-        <div className=" bg-white  w-[500px] h-[350px] m-[35px] " style={{ backgroundPosition: 'center'}}>
-          <div className=' text-5xl font-bold leading-[60px] text-center mt-20'>
+        <div className=" bg-white  w-[350px] h-[250px] m-[35px] lg:w-[500px] lg:h-[350px] " style={{ backgroundPosition: 'center'}}>
+          <div className=' text-5xl font-bold leading-[60px] text-center mt-8 lg:mt-20'>
             <h1>All Work</h1>
             <h1>Done on</h1>
             <h1>Premise</h1>
           </div>
         </div>
-        <div className=" bg-white w-[500px] h-[350px] m-[35px]" style={{ backgroundPosition: 'center' }}>
-          <div className='text-5xl font-bold leading-[60px] text-center mt-20'>
+        <div className=" bg-white w-[350px] h-[250px] m-[35px] lg:w-[500px] lg:h-[350px]" style={{ backgroundPosition: 'center' }}>
+          <div className='text-5xl font-bold leading-[60px] text-center mt-8 lg:mt-20'>
             <h1>We Accept</h1>
             <h1>Competitor</h1> 
             <h1>Coupons</h1>
           </div>
         </div>
-        <div className=" bg-white w-[500px] h-[350px] m-[35px]" style={{ backgroundPosition: 'center' }}>
-          <div className='text-5xl font-bold leading-16 text-center mt-16'>
+        <div className=" bg-white w-[350px] h-[250px] m-[35px] lg:w-[500px] lg:h-[350px]" style={{ backgroundPosition: 'center' }}>
+          <div className='text-5xl font-bold leading-16 text-center mt-6 lg:mt-20'>
             <h1>Loyalty</h1>
             <h1>Program</h1>
             </div>
-            <div className='text-xl leading-normal text-center mt-6'>
+            <div className='text-xl leading-normal text-center mt-4'>
             <p>Spend more than $250 and receive </p>
             <p>25% off dry cleaning& 10% off laundry </p>  
             <p>for all future orders</p>
