@@ -1,10 +1,12 @@
 import React from 'react';
 import ServiceDropdown from '../components/section-2'
+
 import FloatingSections from '../components/section-3'
 import Video from '../components/video'
 import storyimg from '../styles/images/story-img.png'
 import storyimg2 from '../styles/images/story-img2.png'
-import servicesimg from '../styles/images/services-img.png'
+
+import FlipSection from '../components/MobileScrollFlipList'
 
 
 /** mt-[180px] block w-[90%] h-auto 
@@ -29,16 +31,15 @@ return (
       </div>
     </section>
 
-    <section className="flex flex-col items-center justify-center w-full " >
-      <div>
-        <h1 className='text-black text-5xl text-center font-sans font-bold mt-16 lg:text-6xl'> Our Services</h1>
-      </div>
-      <div className="section2-container flex flex-row items-center justify-center gap-20 mt-20 mb-60" >
-        <img className="section2-img hidden lg:block"
-            src={servicesimg} alt="image" style={{ width: "34vw", height: "51vh" }}/>
-        <ServiceDropdown className="service-dropdown lg:h-full" />
-      </div>
-    </section>
+  <section >
+    <div>
+    <FlipSection/>
+
+   
+    </div>
+  
+  </section>
+  
 
 
     <section  style={{background:'black'}}>
@@ -61,3 +62,16 @@ return (
 
 export default Home;
 
+/**
+ * 
+ *   <section className="flex flex-col items-center justify-center w-full " >
+      <div>
+        <h1 className='text-black text-5xl text-center font-sans font-bold mt-16 lg:text-6xl'> Our Services</h1>
+      </div>
+      <div className="section2-container flex flex-row items-center justify-center gap-20 mt-20 mb-60" >
+        <img className="section2-img hidden lg:block"
+            src={servicesimg} alt="image" style={{ width: "34vw", height: "51vh" }}/>
+        <ServiceDropdown className="service-dropdown lg:h-full" />
+      </div>
+    </section>
+ */

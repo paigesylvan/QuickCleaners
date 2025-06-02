@@ -3,7 +3,7 @@ import footerimg from '../styles/images/footer-img.png'
 
 const Footer = () => {
   return (
-      <div className="footer flex flex-row justify-center  text-white bg-black font-serif pt-6 pb-6 lg:pt-20 lg:pb-20 lg:space-x-56" >
+      <div className="footer flex flex-row justify-center space-x-24  text-white bg-black font-serif pt-6 pb-6 lg:pt-20 lg:pb-20 lg:space-x-56" >
          <div className="lg:ml-24 lg:w-[400px]">
           <img src={footerimg} alt='img' className=' w-[80px] pb-4 lg:w-[170px] lg:mb-4'></img>
           <p className='text-xs lg:text-xl '>2177 Silvernail Rd,</p>
@@ -11,7 +11,7 @@ const Footer = () => {
           <h2 className="text-xs lg:text-xl">(262) 549-9477</h2>
         </div>
       <div className="font-serif lg:w-[400px]">
-        <h1 className="text-xs lg:text-4xl pb-3 " >Hours</h1>
+        <h1 className="text-md lg:text-4xl pb-1 " >Hours</h1>
         <p className="text-xs lg:text-xl">Monday: 7am - 6pm</p>
         <p className="text-xs lg:text-xl">Tuesday: 7am - 6pm</p>
         <p className="text-xs lg:text-xl">Wednesday: 7am - 6pm</p>

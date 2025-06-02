@@ -61,7 +61,7 @@ const FloatingSections = () => {
             <h1>Loyalty</h1>
             <h1>Program</h1>
             </div>
-            <div className='text-xl leading-normal text-center mt-4'>
+            <div className='text-xl leading-normal text-center mt-4 '>
             <p>Spend more than $250 and receive </p>
             <p>25% off dry cleaning& 10% off laundry </p>  
             <p>for all future orders</p>

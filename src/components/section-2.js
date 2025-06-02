@@ -87,9 +87,9 @@ const ServicesDropdown = () => {
       title: 'Bulk Laundry',
       description: 
       <>
-      <p>Convenient and cost-effective for large amounts of laundry</p>
-      <p>Includes washing, drying, and neatly folding your items</p>
-      <p>Perfect for families, businesses, or frequent bulk needs</p>
+      <p>◦ Convenient and cost-effective for large amounts of laundry</p>
+      <p>◦ Includes washing, drying, and neatly folding your items</p>
+      <p>◦ Perfect for families, businesses, or frequent bulk needs</p>
 
 
 

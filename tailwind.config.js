@@ -7,19 +7,20 @@ module.exports = {
     "./src/components/header.js",
     "./src/components/section-2.js",
     "./src/components/section-3.js",
-    "./app.css"
+    "./app.css",
+    "./src/components/MobileScrollFlipList.js"
   ],
   theme: {
     extend: {
       height: {
-        'screen-6': '6vh', // 20% of the viewport height
+        'screen-6': '6vh',
         'screen-8': '8vh',
+      },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
     },
-    fontFamily: {
-      roboto: ['Roboto', 'sans-serif'],
   },
-  plugins: [],
-  variants: {},
-}
-}
-}
+  plugins: [
+  ],
+};
