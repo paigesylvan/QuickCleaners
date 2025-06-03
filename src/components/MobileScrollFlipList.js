@@ -62,7 +62,7 @@ export default function FlipOnScrollTailwind() {
         <div
           key={i}
           ref={(el) => (refs.current[i] = el)}
-          className="relative my-8 h-[300px] lg:h-[400px] w-full"
+          className="relative my-8 h-[350px] lg:h-[400px] w-full"
         >
           <img
             src={frontImg}
