@@ -57,17 +57,17 @@ export default function FlipOnScrollTailwind() {
   }, []);
 
   return (
-    <div className="container mx-auto max-w-xl py-10">
+    <div className="container items-center mx-auto max-w-xl py-4">
       {frontImages.map((frontImg, i) => (
         <div
           key={i}
           ref={(el) => (refs.current[i] = el)}
-          className="relative my-8 h-[400px] w-full"
+          className="relative my-8 h-[300px] lg:h-[400px] w-full"
         >
           <img
             src={frontImg}
             alt={`Front ${i + 1}`}
-            className={`absolute w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+            className={`absolute w-full h-full lg:object-cover transition-opacity duration-500 ${
               currentCenterIndex === i ? 'opacity-0' : 'opacity-100'
             }`}
             draggable={false}
@@ -75,7 +75,7 @@ export default function FlipOnScrollTailwind() {
           <img
             src={backImages[i]}
             alt={`Back ${i + 1}`}
-            className={`absolute w-full h-full object-cover rounded-lg transition-opacity duration-500 ${
+            className={`absolute w-full h-full lg:object-cover transition-opacity duration-500 ${
               currentCenterIndex === i ? 'opacity-100' : 'opacity-0'
             }`}
             draggable={false}
