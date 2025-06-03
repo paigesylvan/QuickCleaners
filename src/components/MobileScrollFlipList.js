@@ -11,10 +11,16 @@ import services8 from '../styles/images/services-8.jpg';
 
 import back1 from '../styles/images/back-1.png'
 import back2 from '../styles/images/back-2.png'
-
+import back3 from '../styles/images/back-3.png'
+import back4 from '../styles/images/back-4.png'
+import back5 from '../styles/images/back-5.png'
+import back6 from '../styles/images/back-6.png'
+import back7 from '../styles/images/back-7.png'
+import back8 from '../styles/images/back-8.png'
 
 const frontImages = [services1, services2, services3, services4, services5, services6, services7, services8];
-const backImages = [back1, back2];
+const backImages = [back1, back2, back3, back4, back5, back6, back7, back8];
+
 
 
 export default function FlipOnScrollTailwind() {
@@ -56,7 +62,7 @@ export default function FlipOnScrollTailwind() {
         <div
           key={i}
           ref={(el) => (refs.current[i] = el)}
-          className="relative my-8 h-80 w-full"
+          className="relative my-8 h-[400px] w-full"
         >
           <img
             src={frontImg}
