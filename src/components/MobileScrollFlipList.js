@@ -9,13 +9,12 @@ import services6 from '../styles/images/services-6.png';
 import services7 from '../styles/images/services-7.jpg';
 import services8 from '../styles/images/services-8.jpg';
 
-import storyimg from '../styles/images/story-img2.png'
+import back1 from '../styles/images/back-1.png'
+import back2 from '../styles/images/back-2.png'
 
 
 const frontImages = [services1, services2, services3, services4, services5, services6, services7, services8];
-const backImages = storyimg;
-
-import React, { useEffect, useRef, useState } from 'react';
+const backImages = [back1, back2];
 
 
 export default function FlipOnScrollTailwind() {
@@ -57,7 +56,7 @@ export default function FlipOnScrollTailwind() {
         <div
           key={i}
           ref={(el) => (refs.current[i] = el)}
-          className="relative my-8 h-48 w-full"
+          className="relative my-8 h-80 w-full"
         >
           <img
             src={frontImg}
