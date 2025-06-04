@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-import ScrollRevealBoxes from '../components/section-3'
+import ScrollRevealBoxes from '../components/OurPerks'
 import Video from '../components/video'
 import storyimg from '../styles/images/story-img.png'
 import storyimg2 from '../styles/images/story-img2.png'
 
-import FlipSection from '../components/MobileScrollFlipList'
+import FlipSection from '../components/OurServices'
 
 
 /** mt-[180px] block w-[90%] h-auto 

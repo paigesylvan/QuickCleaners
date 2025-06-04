@@ -7,7 +7,7 @@ const Video = () => {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      video.muted = true; // Required for iOS Safari autoplay
+      video.muted = true; 
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
