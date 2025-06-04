@@ -87,8 +87,6 @@ export default function FlipOnScrollTailwind() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // rest of your component code...
-
 
 
   return (
@@ -106,7 +104,7 @@ export default function FlipOnScrollTailwind() {
                 src={frontImg}
                 alt={`Front ${i + 1}`}
                 className={`
-                  absolute inset-0 w-full h-full object-cover
+                  absolute inset-0 w-full h-full object-cover overflow-hidden
                   transition-opacity duration-500
                   ${currentCenterIndex === null || currentCenterIndex !== i ? 'opacity-100' : 'opacity-0'}
                   lg:group-hover:opacity-0
@@ -116,14 +114,14 @@ export default function FlipOnScrollTailwind() {
     
               {/* Back Image */}
               <div
-                className={`absolute w-full h-full transition-opacity duration-500
+                className={`absolute w-full h-full transition-opacity duration-500 overflow-hidden
                   ${currentCenterIndex === i ? 'opacity-100' : 'opacity-0'}
                   lg:group-hover:opacity-100
                   bg-cover bg-center flex flex-col justify-center p-6 text-white`}
                   style={{ backgroundImage: `url(${backImages[i]})` }}
                   >
-                <h2 className=" text-xl lg:text-6xl font-bold mb-4 drop-shadow-md">{backTitles[i]}</h2>
-                <p className="text-sm lg:text-2xl drop-shadow-md">{backTexts[i]}</p>
+                <h2 className=" text-xl lg:text-5xl font-bold mb-4 drop-shadow-md">{backTitles[i]}</h2>
+                <p className="text-sm lg:text-xl drop-shadow-md">{backTexts[i]}</p>
               </div>
             </div>
           ))}
@@ -133,14 +131,3 @@ export default function FlipOnScrollTailwind() {
     
 }
 
-/*        <img
-                src={backImages[i]}
-                alt={`Back ${i + 1}`}
-                className={`
-                  absolute inset-0 w-full h-full object-cover
-                  transition-opacity duration-500
-                  ${currentCenterIndex === i ? 'opacity-100' : 'opacity-0'}
-                  lg:group-hover:opacity-100
-                `}
-                draggable={false}
-              />*/

@@ -9,7 +9,7 @@ const Footer = () => {
           <p className='text-xs lg:text-xl '>2177 Silvernail Rd,</p>
           <p className="text-xs pb-4 lg:text-xl lg:mb-4">Pewaukee, WI 53072</p>
           <h2 className="text-xs lg:text-xl">(262) 549-9477</h2>
-        </div>
+      </div>
       <div className="font-serif lg:w-[400px]">
         <h1 className="text-md lg:text-4xl pb-1 " >Hours</h1>
         <p className="text-xs lg:text-xl">Monday: 7am - 6pm</p>

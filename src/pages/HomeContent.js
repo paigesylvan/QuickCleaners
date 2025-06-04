@@ -1,16 +1,10 @@
 import React from 'react';
-
-
 import ScrollRevealBoxes from '../components/OurPerks'
 import Video from '../components/video'
 import storyimg from '../styles/images/story-img.png'
 import storyimg2 from '../styles/images/story-img2.png'
-
 import FlipSection from '../components/OurServices'
 
-
-/** mt-[180px] block w-[90%] h-auto 
-   */
 
 const Home = () => {
 
@@ -28,18 +22,18 @@ return (
               <h5 className="text-2xl font-serif mt-10 font-bold lg:text-4xl lg:mt-16"
               >Trust us to bring out the best in what you wear</h5>
             </div>   
-      </div>
+        </div>
     </section>
 
     <section className='flex flex-col items-center mb-16 lg:mb-[100px] mt-4' >
-    <img src={storyimg} className=' hidden lg:block p-20' alt='owner-image'></img>
-    <img src={storyimg2} className='block lg:hidden p-6' alt='owner-image-single' ></img>
-    <div className='flex flex-col items-center justify-center  '>
-      <h1 className="text-5xl font-bold text-center lg:text-7xl overflow-hidden ">Our Story</h1>
-      <h2 className="text-md mt-11 w-[88%] lg:text-4xl lg:w-[69%] text-center overflow-hidden "> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.
-      </h2>
-      <h2 className="text-md  mt-8  lg:text-4xl overflow-hidden "> - Sandy & staff at Quick Cleaners & Laundry</h2>
-    </div>
+      <img src={storyimg} className=' hidden lg:block p-20' alt='owner-image'></img>
+      <img src={storyimg2} className='block lg:hidden p-6' alt='owner-image-single' ></img>
+        <div className='flex flex-col items-center justify-center  '>
+          <h1 className="text-5xl font-bold text-center lg:text-7xl overflow-hidden ">Our Story</h1>
+          <h2 className="text-md mt-11 w-[88%] lg:text-4xl lg:w-[69%] text-center overflow-hidden "> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.
+          </h2>
+          <h2 className="text-md  mt-8  lg:text-4xl overflow-hidden "> - Sandy & staff at Quick Cleaners & Laundry</h2>
+        </div>
     </section>
 
     <section>
@@ -49,28 +43,9 @@ return (
     <section >
     <FlipSection/>
     </section>
-  
-
-
-   
-
-
   </div>
   )
 };
 
 export default Home;
 
-/**
- * 
- *   <section className="flex flex-col items-center justify-center w-full " >
-      <div>
-        <h1 className='text-black text-5xl text-center font-sans font-bold mt-16 lg:text-6xl'> Our Services</h1>
-      </div>
-      <div className="section2-container flex flex-row items-center justify-center gap-20 mt-20 mb-60" >
-        <img className="section2-img hidden lg:block"
-            src={servicesimg} alt="image" style={{ width: "34vw", height: "51vh" }}/>
-        <ServiceDropdown className="service-dropdown lg:h-full" />
-      </div>
-    </section>
- */
