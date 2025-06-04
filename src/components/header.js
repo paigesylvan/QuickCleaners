@@ -1,34 +1,47 @@
-import React, { useEffect }from 'react';
-import headerimg from '../styles/images/header-img.png'
-
+import React, { useEffect, useRef } from 'react';
+import headerimg from '../styles/images/header-img.png';
 
 const Header = () => {
+  const headerRef = useRef(null);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
-    const header = document.querySelector(".header");
-  
+    const header = headerRef.current;
+
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        header.style.transform = "translateY(-100%)";
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down
+        header.classList.add('-translate-y-full');
+        header.classList.remove('translate-y-0');
       } else {
-        header.style.transform = "translateY(0)";
+        // Scrolling up
+        header.classList.remove('-translate-y-full');
+        header.classList.add('translate-y-0');
       }
-      lastScrollY = window.scrollY;
+
+      lastScrollY = currentScrollY;
     };
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-    <div className="header absolute top-0 w-full h-screen-8 lg:h-screen-8 flex justify-center items-center z-[999] bg-white shadow-lg transition-transform duration-300 ease-in-out">
-        <img src={headerimg} alt='logo'className="header-logo   w-96 h-12 lg:w-[600px] lg:h-20 " /> 
+    <div
+      ref={headerRef}
+      className="fixed top-0 w-full z-[999] bg-white shadow-md transform translate-y-0 transition-transform duration-300 ease-in-out"
+    >
+      <div className="flex justify-center items-center h-20 lg:h-24">
+        <img
+          src={headerimg}
+          alt="logo"
+          className="w-60 h-10 lg:w-[600px] lg:h-20 object-contain"
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
-
-

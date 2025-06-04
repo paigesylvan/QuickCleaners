@@ -41,9 +41,9 @@ const ScrollRevealBoxes = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 lex items-center justify-center px-6 py-10 lg:py-20 lg:mb-36 lg:mt-36">
-      <h1 className='text-5xl font-bold text-center lg:text-7xl overflow-hidden pb-8'>Our Perks</h1>
-      <div className=" flex flex-col md:flex-row gap-8 lg:gap-24 w-full max-w-7xl ">
+    <section className="bg-gray-100 flex flex-col items-center justify-center px-6 py-10 lg:py-20 lg:mb-36 lg:mt-36">
+      <h1 className='text-5xl font-bold text-center lg:text-7xl overflow-hidden mb-10'>Our Perks</h1>
+      <div className=" flex flex-col md:flex-row gap-8 lg:gap-24 w-full max-w-7xl  lg:mt-3">
         {boxContent.map((item, i) => (
           <div
             key={i}
@@ -56,8 +56,8 @@ const ScrollRevealBoxes = () => {
                 alt={`Box ${i + 1}`}
                 className="w-24 h-24 object-cover mb-3"
               />
-              <h2 className="text-3xl font-bold mb-2 mt-4">{item.title}</h2>
-              <p className="text-gray-600">{item.text}</p>
+              <h2 className="text-3xl font-bold mb-2 mt-4 overflow-hidden">{item.title}</h2>
+              <p className="text-gray-600 overflow-hidden">{item.text}</p>
             </div>
           </div>
         ))}
