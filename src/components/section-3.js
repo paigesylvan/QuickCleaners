@@ -1,76 +1,68 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from 'react';
 
-const FloatingSections = () => {
+import one from '../styles/images/one.png';
+import two from '../styles/images/two.png';
+import three from '../styles/images/three.png';
+
+const boxImages = [one, two, three];
+
+const boxContent = [
+  {
+    title: 'All Work Done on Premise',
+    text: 'Your garments are cared for by us on-site to ensure quality and accountability.',
+  },
+  {
+    title: 'Competitive Pricing',
+    text: 'We honor competitor coupons for even more savings. Enjoy premium services at affordable rates, without sacrificing quality.',
+  },
+  {
+    title: 'Loyalty Rewards',
+    text: 'We love our customers! Spend more than $250 and recieve 25% off dry cleaning and 10% off laundry for all future orders',
+  },
+];
+
+const ScrollRevealBoxes = () => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".section3-row", {
-      scrollTrigger: {
-        trigger: ".scroll-container3",
-        start: "top 50%", 
-        end: "bottom center",
-        toggleActions: "play none none none",
+    const boxes = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          }
+        });
       },
-      opacity: 1, 
-    });
+      { threshold: 0.5 }
+    );
 
-    gsap.fromTo(".box-right", { x: -200 }, { x: 0, duration: 2, ease: "power2.out", scrollTrigger: {
-      trigger: ".scroll-container3",
-      start: "top 40%",
-      end: "bottom center",
-      toggleActions: "play none none none"
-    }});
-
-    gsap.fromTo(".box-middle", { x: -200 }, { x: 0, duration: 3, ease: "power2.out", scrollTrigger: {
-      trigger: ".scroll-container3",
-      start: "top 40%",
-      end: "bottom center",
-      toggleActions: "play none none none"
-    }});
-
-    gsap.fromTo(".box-left", { x: -200 }, { x: 0, duration: 4, ease: "power2.out", scrollTrigger: {
-      trigger: ".scroll-container3",
-      start: "top 40%",
-      end: "bottom center",
-      toggleActions: "play none none none"
-    }});
-
-  }, []); 
+    boxes.forEach((box) => observer.observe(box));
+    return () => boxes.forEach((box) => observer.unobserve(box));
+  }, []);
 
   return (
-    <section className="scroll-container3 flex item-center justify-center font-serif">
-      <div className="section3-row  items-center flex flex-col m-auto lg:flex-row mt-10 mb-10">
-        <div className=" bg-white  w-[350px] h-[250px] m-[35px] lg:w-[500px] lg:h-[350px] " style={{ backgroundPosition: 'center'}}>
-          <div className=' text-5xl font-bold leading-[60px] text-center mt-8 lg:mt-20'>
-            <h1>All Work</h1>
-            <h1>Done on</h1>
-            <h1>Premise</h1>
-          </div>
-        </div>
-        <div className=" bg-white w-[350px] h-[250px] m-[35px] lg:w-[500px] lg:h-[350px]" style={{ backgroundPosition: 'center' }}>
-          <div className='text-5xl font-bold leading-[60px] text-center mt-8 lg:mt-20'>
-            <h1>We Accept</h1>
-            <h1>Competitor</h1> 
-            <h1>Coupons</h1>
-          </div>
-        </div>
-        <div className=" bg-white w-[350px] h-[250px] m-[35px] lg:w-[500px] lg:h-[350px]" style={{ backgroundPosition: 'center' }}>
-          <div className='text-5xl font-bold leading-16 text-center mt-6 lg:mt-20'>
-            <h1>Loyalty</h1>
-            <h1>Program</h1>
+    <section className="bg-gray-100 flex items-center justify-center px-6 py-20 lg:mb-36 lg:mt-36">
+      <div className="flex flex-col md:flex-row gap-24 w-full max-w-7xl">
+        {boxContent.map((item, i) => (
+          <div
+            key={i}
+            className="flex-1 h-[400px] bg-white shadow-xl opacity-0 transition-all duration-700 transform translate-y-10"
+            data-animate
+          >
+            <div className="flex flex-col items-center justify-center h-full text-center p-6">
+              <img
+                src={boxImages[i]}
+                alt={`Box ${i + 1}`}
+                className="w-24 h-24 object-cover mb-3"
+              />
+              <h2 className="text-3xl font-bold mb-2 mt-4">{item.title}</h2>
+              <p className="text-gray-600">{item.text}</p>
             </div>
-            <div className='text-xl leading-normal text-center mt-4 '>
-            <p>Spend more than $250 and receive </p>
-            <p>25% off dry cleaning& 10% off laundry </p>  
-            <p>for all future orders</p>
-            </div>
-          
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default FloatingSections;
+export default ScrollRevealBoxes;

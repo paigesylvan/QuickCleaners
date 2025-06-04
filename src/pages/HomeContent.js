@@ -1,7 +1,7 @@
 import React from 'react';
-import ServiceDropdown from '../components/section-2'
 
-import FloatingSections from '../components/section-3'
+
+import ScrollRevealBoxes from '../components/section-3'
 import Video from '../components/video'
 import storyimg from '../styles/images/story-img.png'
 import storyimg2 from '../styles/images/story-img2.png'
@@ -31,31 +31,32 @@ return (
       </div>
     </section>
 
-  <section >
-    <div>
-    <FlipSection/>
-
-   
+    <section className='flex flex-col items-center mb-[100px]' >
+    <img src={storyimg} className=' hidden lg:block p-20' alt='owner-image'></img>
+    <img src={storyimg2} className='block lg:hidden p-6' alt='owner-image-single' ></img>
+    <div className='flex flex-col items-center justify-center  '>
+      <h1 className="text-5xl font-bold text-center lg:text-7xl">Our Story</h1>
+      <h2 className="text-xl  mt-11 w-[88%] lg:text-4xl lg:w-[69%] text-center"> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.
+      </h2>
+      <h2 className="text-lg  mt-8  lg:text-4xl"> - Sandy & staff at Quick Cleaners & Laundry</h2>
     </div>
+    </section>
+
   
+
+    <section>
+      <ScrollRevealBoxes/>
+    </section>
+
+    <section >
+    <FlipSection/>
   </section>
   
 
 
-    <section  style={{background:'black'}}>
-      <FloatingSections/>
-    </section>
+   
 
-    <section className='flex flex-col items-center mb-[100px]' >
-    <img src={storyimg} className=' hidden lg:block p-20' alt='owner-image'></img>
-    <img src={storyimg2} className='block lg:hidden p-6' alt='owner-image-single' ></img>
-    <div className='flex flex-col items-center justify-center font-serif '>
-      <h1 className="text-5xl font-serif font-bold text-center lg:text-7xl">Our Story</h1>
-      <h2 className="text-xl font-serif mt-11 w-[88%] lg:text-4xl lg:w-[69%] text-center"> For over 35 years, Quick Cleaners has been dedicated to the art of dry cleaning, turning a small-town family ran store into a place of trust, care, and quality service. From wedding dresses to everyday wear, we’ve always believed that great service goes beyond clean clothes—it’s about building lasting relationships. As a small business, we take pride in preserving the integrity of our customers’ wardrobes while staying true to our roots. Because for us, it’s not just about dry cleaning—it’s about the people we serve and the town we call home, from Oconomowoc, Okauchee, Pewaukee, Waukesha and beyond. A sincere thank you to our loyal customers, and a grateful welcome to new ones. We hope to provide distinctive care for all that you wear.
-      </h2>
-      <h2 className="text-lg font-serif mt-8  lg:text-4xl"> - Sandy & staff at Quick Cleaners & Laundry</h2>
-    </div>
-    </section>
+
   </div>
   )
 };
