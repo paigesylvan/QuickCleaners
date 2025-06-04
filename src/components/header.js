@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <div ref={headerRef} className="fixed top-0 w-full z-[999] bg-white shadow-md transform translate-y-0 transition-transform duration-300 ease-in-out">
-      <div className="flex justify-center items-center h-[50px] lg:h-24">
+      <div className="flex justify-center items-center">
         <img src={headerimg} alt="logo" className="w-60 h-10 lg:w-[600px] lg:h-20 object-contain" />
       </div>
     </div>
