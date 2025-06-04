@@ -5,9 +5,9 @@ module.exports = {
     "./src/pages/Layout.js",
     "./src/components/footer.js",
     "./src/components/header.js",
-    "./src/components/section-3.js",
+    "./src/components/OurPerks.js",
     "./app.css",
-    "./src/components/MobileScrollFlipList.js"
+    "./src/components/OurServices.js"
   ],
   theme: {
     extend: {
