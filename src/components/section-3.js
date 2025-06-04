@@ -41,12 +41,12 @@ const ScrollRevealBoxes = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 flex items-center justify-center px-6 py-20 lg:mb-36 lg:mt-36">
-      <div className="flex flex-col md:flex-row gap-24 w-full max-w-7xl">
+    <section className="bg-gray-100 lex items-center justify-center px-6 py-10 lg:py-20 lg:mb-36 lg:mt-36">
+      <div className=" flex flex-col md:flex-row gap-8 lg:gap-24 w-full max-w-7xl ">
         {boxContent.map((item, i) => (
           <div
             key={i}
-            className="flex-1 h-[400px] bg-white shadow-xl opacity-0 transition-all duration-700 transform translate-y-10"
+            className="flex-1 h-full lg:h-[400px] overflow-hidden bg-white shadow-xl opacity-0 transition-all duration-700 transform translate-y-10"
             data-animate
           >
             <div className="flex flex-col items-center justify-center h-full text-center p-6">

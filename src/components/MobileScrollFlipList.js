@@ -92,7 +92,7 @@ export default function FlipOnScrollTailwind() {
 
 
   return (
-      <div className="w-full px-4 lg:px-8 mt-8 mb-36">
+      <div className="w-full px-4 lg:px-8 my-12 lg:mb-36">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
           {frontImages.map((frontImg, i) => (
             <div
