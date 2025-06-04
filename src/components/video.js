@@ -6,19 +6,13 @@ const Video = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-
     if (video) {
+      video.muted = true; // Required for iOS Safari autoplay
       const playPromise = video.play();
-
       if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            // Video is playing 🎉
-          })
-          .catch((error) => {
-            // Autoplay failed, handle it if needed
-            console.error("Autoplay failed:", error);
-          });
+        playPromise.catch((error) => {
+          console.error("Autoplay failed:", error);
+        });
       }
     }
   }, []);
@@ -28,10 +22,10 @@ const Video = () => {
       ref={videoRef}
       className="video"
       loop
+      muted
+      autoPlay
       playsInline
       preload="metadata"
-      autoPlay
-      muted
     >
       <source src={Movie} type="video/mp4" />
     </video>

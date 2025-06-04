@@ -18,7 +18,7 @@ return (
   <div className="homepage">
     <section className="w-full relative flex flex-col overflow-hidden " >
       <div className='relative w-scree h-screen bg-black overflow-hidden' >
-           <Video className=' autoPlay muted loop playsInline'/>
+           <Video/>
            <div className='gradient-overlay relative w-full h-full bg-gradient-to-t from-[rgba(6,2,2,0.33)] to-transparent z-10'></div>
             <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
               <h1 className=" text-3xl font-bold font-serif lg:text-5xl 
