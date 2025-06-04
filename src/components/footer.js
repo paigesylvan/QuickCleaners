@@ -8,7 +8,9 @@ const Footer = () => {
           <img src={footerimg} alt='img' className=' w-[80px] pb-4 lg:w-[170px] lg:mb-4'></img>
           <p className='text-xs lg:text-xl '>2177 Silvernail Rd,</p>
           <p className="text-xs pb-4 lg:text-xl lg:mb-4">Pewaukee, WI 53072</p>
-          <h2 className="text-xs lg:text-xl">(262) 549-9477</h2>
+          <a href="tel:2625499477" className="text-xs lg:text-xl hover:text-yellow-400 transition-colors duration-200 block">
+          (262) 549-9477
+          </a>
       </div>
       <div className="font-serif lg:w-[400px]">
         <h1 className="text-md lg:text-4xl pb-1 " >Hours</h1>
