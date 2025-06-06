@@ -28,56 +28,6 @@
 }
 
 
-.services-dropdown-container {
-  /* Full width with max width and padding */
-  @apply w-full max-w-[800px] p-5 bg-gray-50 rounded-lg shadow-md gap-5 transition-[gap] duration-300 ease-in-out;
-}
-
-.dropdown-service-item {
-  @apply w-full border border-gray-300 rounded-md overflow-hidden;
-}
-
-.dropdown-service-content {
-  @apply overflow-hidden bg-gray-100 text-gray-700 font-sans text-left transition-[height,padding] duration-300 ease-in-out;
-  max-height: 0;
-  padding: 0;
-}
-
-.dropdown-service-content.open {
-  @apply p-4 max-h-[800px];
-  height: auto;
-}
-
-.dropdown-service-title {
-  @apply flex justify-between items-center p-4 bg-white cursor-pointer transition-colors duration-300 font-bold h-[40px] font-sans;
-}
-
-.dropdown-service-title:hover {
-  @apply bg-gray-100;
-}
-
-.service-arrow {
-  @apply p-2 text-lg transition-transform duration-300 ease-in-out;
-  transform: rotate(0deg);
-}
-
-.service-arrow.open {
-  @apply rotate-180;
-}
-
-.dropdown-service-content h3 {
-  @apply my-1 text-[15px] font-sans no-underline;
-}
-
-.dropdown-service-content p {
-  @apply text-left text-[14px] mt-0 mb-1 text-gray-600 font-sans no-underline;
-}
-
-/* --------- Section 3 --------- */
-
-
-
-
 
 
 
