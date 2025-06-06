@@ -41,9 +41,9 @@ const ScrollRevealBoxes = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 flex flex-col items-center justify-center px-6 pb-10 lg:py-20 lg:mb-24 lg:mt-8 overflow-hidden">
-      <h1 className='text-5xl font-bold text-center lg:text-7xl overflow-hidden mb-12'>Our Perks</h1>
-      <div className=" overflow-hidden flex flex-col md:flex-row gap-8 lg:gap-24 w-full max-w-7xl  lg:mt-6">
+    <section className="bg-gray-100 flex flex-col items-center justify-center px-6 pb-10 lg:mb-5 overflow-hidden">
+      <h1 className='text-5xl font-bold text-center lg:text-7xl overflow-hidden py-12 lg:py-16 '>Our Perks</h1>
+      <div className=" overflow-hidden flex flex-col md:flex-row gap-8 lg:gap-24 w-full max-w-7xl  ">
         {boxContent.map((item, i) => (
           <div
             key={i}

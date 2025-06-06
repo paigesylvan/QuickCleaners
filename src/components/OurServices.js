@@ -91,7 +91,7 @@ export default function FlipOnScrollTailwind() {
 
   return (
       <div className="w-full px-4 mb-12 lg:px-8  lg:mb-14">
-        <h1 className='text-5xl font-bold text-center lg:text-7xl overflow-hidden mb-24'>Our Services</h1>
+        <h1 className='text-5xl py-12 font-bold text-center lg:text-7xl overflow-hidden lg:mb-8 '>Our Services</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 overflow-hidden">
           {frontImages.map((frontImg, i) => (
             <div
