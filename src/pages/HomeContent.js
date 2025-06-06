@@ -25,7 +25,7 @@ return (
         </div>
     </section>
 
-    <section className='flex flex-col items-center  mt-6' >
+    <section className='flex flex-col items-center mb-8 mt-6' >
       <img src={storyimg} className=' hidden lg:block px-64' alt='owner-image'></img>
       <img src={storyimg2} className='block lg:hidden p-6' alt='owner-image-single' ></img>
         <div className='flex flex-col items-center justify-center  '>
