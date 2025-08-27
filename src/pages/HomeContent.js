@@ -15,9 +15,9 @@ return (
            <Video/>
            <div className='gradient-overlay relative w-full h-full bg-gradient-to-t from-[rgba(6,2,2,0.33)] to-transparent z-10'></div>
             <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
-              <h1 className=" text-3xl font-semibold lg:text-5xl 
+              <h1 className=" text-3xl font-semibold lg:text-4xl 
               ">  Distinctive Care For All That You Wear</h1>
-              <h4 className="text-xl  mt-9 lg:text-4xl lg:mt-16 lg:leading-[50px]"
+              <h4 className="text-2xl  mt-9 lg:text-3xl lg:mt-16 lg:leading-[50px]"
               >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care. Trust us to bring out the best in what you wear.</h4>
               <button
               onClick={() => {document.getElementById('our-services')?.scrollIntoView({ behavior: 'smooth' });}}
