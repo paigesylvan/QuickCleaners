@@ -15,15 +15,13 @@ return (
            <Video/>
            <div className='gradient-overlay relative w-full h-full bg-gradient-to-t from-[rgba(6,2,2,0.33)] to-transparent z-10'></div>
             <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
-              <h1 className=" text-3xl font-bold lg:text-5xl 
+              <h1 className=" text-3xl font-semibold lg:text-5xl 
               ">  Distinctive Care For All That You Wear</h1>
-              <h4 className="text-xl  mt-9 lg:text-4xl lg:mt-20 lg:leading-[60px]"
-              >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care</h4>
-              <h5 className="text-2xl  mt-10 font-bold lg:text-4xl lg:mt-10"
-              >Trust us to bring out the best in what you wear</h5>
+              <h4 className="text-xl  mt-9 lg:text-4xl lg:mt-16 lg:leading-[50px]"
+              >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care. Trust us to bring out the best in what you wear.</h4>
               <button
               onClick={() => {document.getElementById('our-services')?.scrollIntoView({ behavior: 'smooth' });}}
-              className="mt-24 w-40 h-12 inline-block px-6 py-3 bg-white text-black font-semibold rounded-sm shadow hover:bg-gray-300 transition-all duration-300"
+              className="text-2xl mt-16 w-60 h-14 inline-block px-6 py-3 bg-gray-700 text-white  rounded-lg shadow hover:bg-white hover:text-black transition-all duration-300"
               >Our Services
               </button>
             </div>   
