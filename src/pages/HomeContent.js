@@ -17,7 +17,7 @@ return (
             <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
               <h1 className=" text-3xl font-semibold lg:text-4xl 
               ">  Distinctive Care For All That You Wear</h1>
-              <h4 className="text-2xl  mt-9 lg:text-3xl lg:mt-16 lg:leading-[50px]"
+              <h4 className="text-xl  mt-9 lg:text-2xl lg:mt-4 lg:leading-[30px]"
               >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care. Trust us to bring out the best in what you wear.</h4>
               <button
               onClick={() => {document.getElementById('our-services')?.scrollIntoView({ behavior: 'smooth' });}}
