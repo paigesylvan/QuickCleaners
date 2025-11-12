@@ -91,7 +91,7 @@ export default function FlipOnScrollTailwind() {
 
   return (
       <div className="w-full px-4 mb-12 lg:px-8  lg:mb-14">
-        <h1 className=' text-5xl py-12 font-bold text-center lg:text-7xl overflow-hidden lg:mb-8 '>Our Services</h1>
+        <h1 className=' text-5xl py-12 font-bold text-center lg:text-5xl overflow-hidden lg:mb-8 '>Our Services</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 overflow-hidden">
           {frontImages.map((frontImg, i) => (
             <div
@@ -120,7 +120,7 @@ export default function FlipOnScrollTailwind() {
                   bg-cover bg-center flex flex-col justify-center p-6 text-white`}
                   style={{ backgroundImage: `url(${backImages[i]})` }}
                   >
-                <h2 className=" text-xl lg:text-5xl font-bold mb-4 drop-shadow-md">{backTitles[i]}</h2>
+                <h2 className=" text-xl lg:text-4xl font-bold mb-4 drop-shadow-md">{backTitles[i]}</h2>
                 <p className="text-sm lg:text-xl drop-shadow-md">{backTexts[i]}</p>
               </div>
             </div>
