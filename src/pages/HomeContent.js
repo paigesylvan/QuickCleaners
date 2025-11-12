@@ -17,8 +17,11 @@ return (
             <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
               <h1 className=" text-2xl font-semibold lg:text-5xl max-w-2xl tracking-[0.09em]
               ">  Distinctive Care For All That You Wear</h1>
-              <h4 className="text-sm  lg:text-2xl mt-4 lg:leading-[30px] lg:w-3/4 max-w-2xl"
-              >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care. Trust us to bring out the best in what you wear.</h4>
+              <h4 className="text-sm  lg:text-3xl mt-4 lg:leading-[30px] lg:w-3/4 max-w-2xl"
+              >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care. </h4>
+              <h4 className="text-sm  lg:text-3xl mt-1 lg:leading-[30px] lg:w-3/4 max-w-2xl"
+              >Trust us to bring out the best in what you wear.</h4>
+
               <button
               onClick={() => {document.getElementById('our-services')?.scrollIntoView({ behavior: 'smooth' });}}
               className="text-md w-44 h-12 mt-16 lg:w-60 lg:h-14 lg:text-2xl inline-block px-6 py-3 bg-gray-700 text-white  rounded-lg shadow hover:bg-white hover:text-black transition-all duration-300"
