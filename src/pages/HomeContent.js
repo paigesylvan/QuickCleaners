@@ -15,7 +15,7 @@ return (
            <Video/>
            <div className='gradient-overlay relative w-full h-full bg-gradient-to-t from-[rgba(6,2,2,0.33)] to-transparent z-10'></div>
             <div className="video-overlay-text w-[80%] lg:w-[69%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center text-white z-20">
-              <h1 className=" text-2xl font-semibold lg:text-3xl max-w-2xl tracking-[0.09em]
+              <h1 className=" text-2xl font-semibold lg:text-4xl tracking-[0.09em]
               ">  Distinctive Care For All That You Wear</h1>
               <h4 className="text-sm  lg:text-xl mt-4 lg:leading-[30px] lg:w-3/4 max-w-3xl"
               >From everyday laundry to preserving the elegance of your finest attire, every item is handled with expertise and care. </h4>
