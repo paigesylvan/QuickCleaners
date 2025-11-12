@@ -24,7 +24,7 @@ return (
 
               <button
               onClick={() => {document.getElementById('our-services')?.scrollIntoView({ behavior: 'smooth' });}}
-              className="text-md w-44 h-12 mt-16 lg:w-60 lg:h-14 lg:text-2xl inline-block px-6 py-3 bg-gray-700 text-white  rounded-lg shadow hover:bg-white hover:text-black transition-all duration-300"
+              className="text-md w-44 h-12 mt-16 lg:w-60 lg:h-14 lg:text-2xl inline-block px-6 py-3 bg-gray-700 text-white  rounded-lg shadow hover:bg-white hover:text-gray-700 transition-all duration-300"
               >Our Services
               </button>
             </div>   
