@@ -38,14 +38,14 @@ const backTitles = [
 
 const backTexts = [
   "Experience expert care for your finest garments. We gently restore the beauty and structure of suits, gowns, and delicate fabrics",
-  "Enjoy freshly laundered and perfectly pressed garments, ready to wear and wrinkle-free. For added convenience, we offer boxed shirt packaging—ideal for travel, storage, or just a polished finish.",
-  "Simplify your routine with our bulk laundry service—washed, dried, and neatly folded with care. Let us take the hassle out of laundry day so you can focus on everything else.",
-  "Refresh your home with our expert care for bedding, curtains, linens, rugs and more. We handle the heavy lifting—cleaning, pressing, and finishing each item to elevate your space with effortless comfort and cleanliness.",
-  "Trust us with the dress of a lifetime. We carefully clean, restore, and preserve your gown with expert attention to every fabric, detail, and memory—so it stays beautiful for generations to come.",
+  "Enjoy freshly laundered and perfectly pressed garments, ready to wear and wrinkle-free. For added convenience, we offer boxed shirt packaging, ideal for travel, storage, or just a polished finish.",
+  "Simplify your routine with our bulk laundry service; washed, dried, and neatly folded with care. Let us take the hassle out of laundry day so you can focus on everything else.",
+  "Refresh your home with our expert care for bedding, curtains, linens, rugs and more. We handle the heavy lifting; cleaning, pressing, and finishing each item to elevate your space with effortless comfort and cleanliness.",
+  "Trust us with the dress of a lifetime. We carefully clean, restore, and preserve your gown with expert attention to every fabric, detail, and memory, so it stays beautiful for generations to come.",
   "Sometimes all your clothes need is a flawless finish. Our press-only service smooths, sharpens, and refreshes garments—perfect for when cleaning isn’t required, but presentation is everything.",
-  "Delicate by nature, luxurious by feel—suede and leather deserve expert care. We clean, condition, and restore your specialty items to preserve their texture, shape, and timeless appeal.",
+  "Delicate by nature, luxurious by feel. Suede and leather deserve expert care. We clean, condition, and restore your specialty items to preserve their texture, shape, and timeless appeal.",
   "Well-fitting clothes make all the difference. From tailoring to zipper replacements and button repairs, our expert service keeps your wardrobe looking sharp and ready to wear.",
-  "Professional care you can count on. We provide reliable cleaning services for hospitals, uniforms, and bulk accounts—tailored solutions to keep your team looking polished and prepared.",
+  "Professional care you can count on. We provide reliable cleaning services for hospitals, uniforms, and bulk accounts. Tailored solutions to keep your team looking polished and prepared.",
 ];
 
 export default function FlipOnScrollTailwind() {
