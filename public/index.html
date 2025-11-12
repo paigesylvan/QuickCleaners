@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8" />
 
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
+    <!-- 🔒 Force Google/browsers to use YOUR icons (absolute URLs + version to bust cache) -->
+    <link rel="icon" href="https://www.quickcleanersandlaundry.com/favicon-v4.ico?v=4" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://www.quickcleanersandlaundry.com/favicon-48x48.png?v=4">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.quickcleanersandlaundry.com/favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.quickcleanersandlaundry.com/favicon-16x16.png?v=4">
+    <link rel="apple-touch-icon" href="https://www.quickcleanersandlaundry.com/apple-touch-icon.png?v=4">
 
+    <!-- 🅿️ Poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,38 +18,44 @@
       rel="stylesheet"
     />
 
+    <!-- Essentials -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-
+    <title>Quick Cleaners & Laundry | Pewaukee, WI</title>
     <meta
       name="description"
-      content="Quick Cleaners & Laundry — expert dry cleaning, wash & fold, and same-day service in Pewaukee, WI."
+      content="Quick Cleaners & Laundry — expert dry cleaning, wash & fold, and same-day service in Pewaukee, Wisconsin."
     />
 
-
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
-
-
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
+    <!-- Social preview (also helps Google pick a better thumbnail) -->
     <meta property="og:title" content="Quick Cleaners & Laundry" />
     <meta
       property="og:description"
-      content="Professional dry cleaning, laundry, and alterations in Pewaukee, Wisconsin."
-    />
-    <meta
-      property="og:image"
-      content="https://www.quickcleanersandlaundry.com/images/quickcleaners-og.png"
+      content="Professional dry cleaning, laundry, and alterations in Pewaukee, WI."
     />
     <meta property="og:url" content="https://www.quickcleanersandlaundry.com" />
+    <meta property="og:image" content="https://www.quickcleanersandlaundry.com/images/quickcleaners-og.png?v=4" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://www.quickcleanersandlaundry.com/images/quickcleaners-og.png" />
+    <meta name="twitter:image" content="https://www.quickcleanersandlaundry.com/images/quickcleaners-og.png?v=4" />
 
+    <!-- 👇 Explicit brand logo for Google (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Quick Cleaners & Laundry",
+      "url":"https://www.quickcleanersandlaundry.com/",
+      "logo":"https://www.quickcleanersandlaundry.com/favicon-48x48.png?v=4",
+      "sameAs":[]
+    }
+    </script>
 
-    <title>Quick Cleaners & Laundry | Pewaukee, WI</title>
+    <!-- (Temporary) Remove manifest to avoid CRA default icons during reindex; re-enable after Google flips -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- CRA will inject the JS bundle here -->
   </body>
 </html>
