@@ -50,6 +50,17 @@
     }
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- (Temporary) Remove manifest to avoid CRA default icons during reindex; re-enable after Google flips -->
     <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
   </head>
