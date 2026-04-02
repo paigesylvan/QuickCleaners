@@ -8,9 +8,9 @@ const Footer = () => {
           <img src={footerimg} alt='img' className=' w-[80px] pb-4 lg:w-[170px] lg:mb-3'></img>
           <p className='text-xs lg:text-xl '>2177 Silvernail Rd,</p>
           <p className="text-xs pb-4 lg:text-xl lg:mb-4">Pewaukee, WI 53072</p>
-          <a href="tel:2625499477" className="text-xs lg:text-xl hover:text-gray-700 transition-colors duration-200 block">
-          (262) 549-9477
-          </a>
+          <a href="tel:2625499477" onClick={() => { if (window.gtag) { window.gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'footer_phone' }); } }}
+           className="text-xs lg:text-xl hover:text-gray-700 transition-colors duration-200 block"
+          ></a>
       </div>
       <div className=" lg:w-[400px]">
         <h1 className="text-md lg:text-4xl pb-1 " >Hours</h1>
